@@ -1,0 +1,1228 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:GND #PWR0101
+U 1 1 5E965710
+P 3050 6050
+F 0 "#PWR0101" H 3050 5800 50  0001 C CNN
+F 1 "GND" H 3055 5877 50  0000 C CNN
+F 2 "" H 3050 6050 50  0001 C CNN
+F 3 "" H 3050 6050 50  0001 C CNN
+	1    3050 6050
+	1    0    0    -1
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5E9666F4
+P 2500 6050
+F 0 "#PWR0102" H 2500 5800 50  0001 C CNN
+F 1 "GND" H 2505 5877 50  0000 C CNN
+F 2 "" H 2500 6050 50  0001 C CNN
+F 3 "" H 2500 6050 50  0001 C CNN
+	1    2500 6050
+	1    0    0    -1
+$EndComp
+Text GLabel 3600 5250 1    50   Input ~ 0
+row0
+$Comp
+L base:74VHC4051AFT U1
+U 1 1 5EA62299
+P 2750 5750
+F 0 "U1" H 2775 6375 50  0000 C CNN
+F 1 "74VHC4051AFT" H 2775 6284 50  0000 C CNN
+F 2 "base:TSSOP16" H 2850 5900 50  0001 C CNN
+F 3 "" H 2850 5900 50  0001 C CNN
+	1    2750 5750
+	1    0    0    -1
+$EndComp
+Wire Wire Line
+	2500 5950 2500 6050
+Connection ~ 2500 6050
+Text GLabel 3500 5250 1    50   Input ~ 0
+row1
+Text GLabel 3400 5250 1    50   Input ~ 0
+row2
+Text GLabel 3700 5250 1    50   Input ~ 0
+row3
+Wire Wire Line
+	2500 5350 2500 5450
+Wire Wire Line
+	2500 5650 2500 5750
+Wire Wire Line
+	2500 5750 2400 5750
+Wire Wire Line
+	2400 5750 2400 5950
+Wire Wire Line
+	2400 5950 2500 5950
+Connection ~ 2500 5750
+Connection ~ 2500 5950
+Wire Wire Line
+	2500 5450 2400 5450
+Wire Wire Line
+	2400 5450 2400 5750
+Connection ~ 2500 5450
+Connection ~ 2400 5750
+Text GLabel 3050 5850 2    50   Input ~ 0
+sela
+Text GLabel 3050 5950 2    50   Input ~ 0
+selb
+Text GLabel 2500 5850 0    50   Input ~ 0
+inh
+Text GLabel 2500 5550 0    50   Output ~ 0
+row
+$Comp
+L base:ToprePad TP1
+U 1 1 5F1C8FBB
+P 1350 2750
+F 0 "TP1" H 1425 2500 60  0001 R CNN
+F 1 "ToprePad" H 1325 2425 60  0001 C CNN
+F 2 "base:ToprePad" H 1350 2750 60  0001 C CNN
+F 3 "" H 1350 2750 60  0001 C CNN
+	1    1350 2750
+	0    -1   1    0
+$EndComp
+Text GLabel 1150 2500 1    50   Input ~ 0
+col0
+Text GLabel 5200 2900 2    50   Output ~ 0
+row0
+Text GLabel 5200 3200 2    50   Output ~ 0
+row1
+Text GLabel 5200 3500 2    50   Output ~ 0
+row2
+Text GLabel 5200 3800 2    50   Output ~ 0
+row3
+Text GLabel 4000 6700 0    50   Output ~ 0
+col0
+Text GLabel 4000 6800 0    50   Output ~ 0
+col1
+Text GLabel 4000 6900 0    50   Output ~ 0
+col2
+Text GLabel 4000 7000 0    50   Output ~ 0
+col3
+Text GLabel 4000 7100 0    50   Output ~ 0
+col4
+Text GLabel 4000 7200 0    50   Output ~ 0
+col5
+Text GLabel 4000 7300 0    50   Output ~ 0
+col6
+Text GLabel 4850 6700 0    50   Output ~ 0
+inh
+Text GLabel 4850 6900 0    50   Output ~ 0
+sela
+Text GLabel 4850 6800 0    50   Output ~ 0
+selb
+$Comp
+L Connector_Generic:Conn_01x07 J1
+U 1 1 5F53F5CB
+P 4200 7000
+F 0 "J1" H 4280 7042 50  0000 L CNN
+F 1 "Conn_01x07" H 4280 6951 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical" H 4200 7000 50  0001 C CNN
+F 3 "~" H 4200 7000 50  0001 C CNN
+	1    4200 7000
+	1    0    0    -1
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x07 J2
+U 1 1 5F57008D
+P 5050 7000
+F 0 "J2" H 5130 7042 50  0000 L CNN
+F 1 "Conn_01x07" H 5130 6951 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical" H 5050 7000 50  0001 C CNN
+F 3 "~" H 5050 7000 50  0001 C CNN
+	1    5050 7000
+	1    0    0    -1
+$EndComp
+$Comp
+L base:GS8051-TR U2
+U 1 1 5F599E34
+P 6850 5650
+F 0 "U2" H 6825 5975 50  0000 C CNN
+F 1 "GS8051-TR" H 6825 5884 50  0000 C CNN
+F 2 "base:SOT-23-5" H 6825 5883 50  0001 C CNN
+F 3 "" H 6850 5650 50  0001 C CNN
+	1    6850 5650
+	1    0    0    -1
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 5F61D94E
+P 6300 5850
+F 0 "#PWR0103" H 6300 5600 50  0001 C CNN
+F 1 "GND" H 6305 5677 50  0000 C CNN
+F 2 "" H 6300 5850 50  0001 C CNN
+F 3 "" H 6300 5850 50  0001 C CNN
+	1    6300 5850
+	1    0    0    -1
+$EndComp
+Wire Wire Line
+	6300 5850 6300 5650
+Wire Wire Line
+	6300 5650 6450 5650
+Wire Wire Line
+	3400 5250 3400 5450
+Wire Wire Line
+	3400 5450 3050 5450
+Wire Wire Line
+	3500 5550 3050 5550
+Wire Wire Line
+	3500 5250 3500 5550
+Wire Wire Line
+	3600 5250 3600 5650
+Wire Wire Line
+	3600 5650 3050 5650
+Wire Wire Line
+	3700 5750 3050 5750
+Wire Wire Line
+	3700 5250 3700 5750
+$Comp
+L Device:R R1
+U 1 1 5F6B8920
+P 4050 5450
+F 0 "R1" V 4257 5450 50  0000 C CNN
+F 1 "22k" V 4166 5450 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3980 5450 50  0001 C CNN
+F 3 "~" H 4050 5450 50  0001 C CNN
+	1    4050 5450
+	0    -1   -1   0
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5F6CBEAD
+P 4050 5550
+F 0 "R2" V 4257 5550 50  0000 C CNN
+F 1 "22k" V 4166 5550 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3980 5550 50  0001 C CNN
+F 3 "~" H 4050 5550 50  0001 C CNN
+	1    4050 5550
+	0    -1   -1   0
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5F6D4FB7
+P 4050 5650
+F 0 "R3" V 4257 5650 50  0000 C CNN
+F 1 "22k" V 4166 5650 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3980 5650 50  0001 C CNN
+F 3 "~" H 4050 5650 50  0001 C CNN
+	1    4050 5650
+	0    -1   -1   0
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 5F6DE4E0
+P 4050 5750
+F 0 "R4" V 4257 5750 50  0000 C CNN
+F 1 "22k" V 4166 5750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 3980 5750 50  0001 C CNN
+F 3 "~" H 4050 5750 50  0001 C CNN
+	1    4050 5750
+	0    -1   -1   0
+$EndComp
+Wire Wire Line
+	3900 5450 3400 5450
+Connection ~ 3400 5450
+Wire Wire Line
+	3500 5550 3900 5550
+Connection ~ 3500 5550
+Wire Wire Line
+	3900 5650 3600 5650
+Connection ~ 3600 5650
+Wire Wire Line
+	3700 5750 3900 5750
+Connection ~ 3700 5750
+Wire Wire Line
+	4200 5450 4200 5550
+Connection ~ 4200 5550
+Wire Wire Line
+	4200 5550 4200 5650
+Connection ~ 4200 5650
+Wire Wire Line
+	4200 5650 4200 5750
+$Comp
+L power:GND #PWR0104
+U 1 1 5F7165EF
+P 4200 5750
+F 0 "#PWR0104" H 4200 5500 50  0001 C CNN
+F 1 "GND" H 4205 5577 50  0000 C CNN
+F 2 "" H 4200 5750 50  0001 C CNN
+F 3 "" H 4200 5750 50  0001 C CNN
+	1    4200 5750
+	1    0    0    -1
+$EndComp
+Connection ~ 4200 5750
+Text GLabel 5800 5750 0    50   Input ~ 0
+row
+$Comp
+L Device:R R6
+U 1 1 5F719B48
+P 6050 5750
+F 0 "R6" V 6257 5750 50  0000 C CNN
+F 1 "330" V 6166 5750 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5980 5750 50  0001 C CNN
+F 3 "~" H 6050 5750 50  0001 C CNN
+	1    6050 5750
+	0    -1   -1   0
+$EndComp
+$Comp
+L Device:R R7
+U 1 1 5F71D917
+P 6800 5150
+F 0 "R7" H 6870 5196 50  0000 L CNN
+F 1 "56k" H 6870 5105 50  0000 L CNN
+F 2 "Resistor_SMD:R_1206_3216Metric" V 6730 5150 50  0001 C CNN
+F 3 "~" H 6800 5150 50  0001 C CNN
+	1    6800 5150
+	0    -1   -1   0
+$EndComp
+$Comp
+L Device:R R8
+U 1 1 5F727D36
+P 7350 5850
+F 0 "R8" V 7557 5850 50  0000 C CNN
+F 1 "270" V 7466 5850 50  0000 C CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 7280 5850 50  0001 C CNN
+F 3 "~" H 7350 5850 50  0001 C CNN
+	1    7350 5850
+	-1   0    0    1
+$EndComp
+$Comp
+L Device:R R5
+U 1 1 5F731CD8
+P 5850 5400
+F 0 "R5" H 5920 5446 50  0000 L CNN
+F 1 "1k" H 5920 5355 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5780 5400 50  0001 C CNN
+F 3 "~" H 5850 5400 50  0001 C CNN
+	1    5850 5400
+	1    0    0    -1
+$EndComp
+Wire Wire Line
+	5800 5750 5850 5750
+Wire Wire Line
+	6200 5750 6450 5750
+Wire Wire Line
+	5850 5750 5850 5550
+Connection ~ 5850 5750
+Wire Wire Line
+	5850 5750 5900 5750
+$Comp
+L power:GND #PWR0105
+U 1 1 5F8C6F01
+P 1550 3850
+F 0 "#PWR0105" H 1550 3600 50  0001 C CNN
+F 1 "GND" H 1555 3677 50  0000 C CNN
+F 2 "" H 1550 3850 50  0001 C CNN
+F 3 "" H 1550 3850 50  0001 C CNN
+	1    1550 3850
+	1    0    0    -1
+$EndComp
+$Comp
+L power:+5V #PWR0112
+U 1 1 5F95C5BC
+P 3150 5350
+F 0 "#PWR0112" H 3150 5200 50  0001 C CNN
+F 1 "+5V" H 3165 5523 50  0000 C CNN
+F 2 "" H 3150 5350 50  0001 C CNN
+F 3 "" H 3150 5350 50  0001 C CNN
+	1    3150 5350
+	1    0    0    -1
+$EndComp
+$Comp
+L power:+5V #PWR0113
+U 1 1 5F95D9BA
+P 7200 5550
+F 0 "#PWR0113" H 7200 5400 50  0001 C CNN
+F 1 "+5V" H 7215 5723 50  0000 C CNN
+F 2 "" H 7200 5550 50  0001 C CNN
+F 3 "" H 7200 5550 50  0001 C CNN
+	1    7200 5550
+	1    0    0    -1
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5F97BB9E
+P 5850 6150
+F 0 "C1" H 5965 6196 50  0000 L CNN
+F 1 "1n" H 5965 6105 50  0000 L CNN
+F 2 "Resistor_SMD:R_0201_0603Metric" H 5888 6000 50  0001 C CNN
+F 3 "~" H 5850 6150 50  0001 C CNN
+	1    5850 6150
+	1    0    0    -1
+$EndComp
+Wire Wire Line
+	5850 5750 5850 6000
+$Comp
+L power:GND #PWR0114
+U 1 1 5F98B3C2
+P 5850 6300
+F 0 "#PWR0114" H 5850 6050 50  0001 C CNN
+F 1 "GND" H 5855 6127 50  0000 C CNN
+F 2 "" H 5850 6300 50  0001 C CNN
+F 3 "" H 5850 6300 50  0001 C CNN
+	1    5850 6300
+	1    0    0    -1
+$EndComp
+Text GLabel 5850 5250 1    50   Output ~ 0
+drain
+Text GLabel 6350 5550 0    50   Output ~ 0
+read
+Wire Wire Line
+	6450 5550 6350 5550
+Connection ~ 6450 5550
+Wire Wire Line
+	6450 5150 6650 5150
+Wire Wire Line
+	6450 5150 6450 5550
+Wire Wire Line
+	6950 5150 7350 5150
+Wire Wire Line
+	7350 5150 7350 5700
+Wire Wire Line
+	7350 5700 7200 5700
+Connection ~ 7350 5700
+$Comp
+L power:GND #PWR0115
+U 1 1 5FA0E788
+P 7350 6000
+F 0 "#PWR0115" H 7350 5750 50  0001 C CNN
+F 1 "GND" H 7355 5827 50  0000 C CNN
+F 2 "" H 7350 6000 50  0001 C CNN
+F 3 "" H 7350 6000 50  0001 C CNN
+	1    7350 6000
+	1    0    0    -1
+$EndComp
+Text GLabel 4850 7000 0    50   Input ~ 0
+drain
+Text GLabel 4850 7100 0    50   Input ~ 0
+read
+Wire Wire Line
+	3150 5350 3050 5350
+Wire Wire Line
+	1150 2500 1150 2850
+Wire Wire Line
+	1250 2850 1150 2850
+Connection ~ 1150 2850
+$Comp
+L base:ToprePad TP2
+U 1 1 5FC205A6
+P 1350 3050
+F 0 "TP2" H 1425 2800 60  0001 R CNN
+F 1 "ToprePad" H 1325 2725 60  0001 C CNN
+F 2 "base:ToprePad" H 1350 3050 60  0001 C CNN
+F 3 "" H 1350 3050 60  0001 C CNN
+	1    1350 3050
+	0    -1   1    0
+$EndComp
+Wire Wire Line
+	1250 3150 1150 3150
+$Comp
+L base:ToprePad TP3
+U 1 1 5FC291A1
+P 1350 3350
+F 0 "TP3" H 1425 3100 60  0001 R CNN
+F 1 "ToprePad" H 1325 3025 60  0001 C CNN
+F 2 "base:ToprePad" H 1350 3350 60  0001 C CNN
+F 3 "" H 1350 3350 60  0001 C CNN
+	1    1350 3350
+	0    -1   1    0
+$EndComp
+Wire Wire Line
+	1250 3450 1150 3450
+$Comp
+L base:ToprePad TP4
+U 1 1 5FC3207A
+P 1350 3650
+F 0 "TP4" H 1425 3400 60  0001 R CNN
+F 1 "ToprePad" H 1325 3325 60  0001 C CNN
+F 2 "base:ToprePad" H 1350 3650 60  0001 C CNN
+F 3 "" H 1350 3650 60  0001 C CNN
+	1    1350 3650
+	0    -1   1    0
+$EndComp
+Wire Wire Line
+	1250 3750 1150 3750
+Wire Wire Line
+	1150 2850 1150 3150
+Connection ~ 1150 3150
+Wire Wire Line
+	1150 3150 1150 3450
+Wire Wire Line
+	1450 2850 1550 2850
+Wire Wire Line
+	1450 3150 1550 3150
+Wire Wire Line
+	1450 3450 1550 3450
+Connection ~ 1550 3450
+Wire Wire Line
+	1550 3450 1550 3750
+Wire Wire Line
+	1450 3750 1550 3750
+Connection ~ 1150 3450
+Wire Wire Line
+	1550 3150 1550 3450
+Wire Wire Line
+	1150 3450 1150 3750
+Wire Wire Line
+	1350 2850 1350 2900
+Wire Wire Line
+	1350 3150 1350 3200
+Wire Wire Line
+	1350 3450 1350 3500
+Wire Wire Line
+	1350 3750 1350 3800
+Wire Wire Line
+	1550 3850 1550 3750
+Connection ~ 1550 3750
+Wire Wire Line
+	1700 2500 1700 2850
+Wire Wire Line
+	1800 2850 1700 2850
+Connection ~ 1700 2850
+Wire Wire Line
+	1800 3150 1700 3150
+Wire Wire Line
+	1800 3450 1700 3450
+Wire Wire Line
+	1800 3750 1700 3750
+Wire Wire Line
+	1700 2850 1700 3150
+Connection ~ 1700 3150
+Wire Wire Line
+	1700 3150 1700 3450
+Connection ~ 1700 3450
+Wire Wire Line
+	1700 3450 1700 3750
+Wire Wire Line
+	1900 2850 1900 2900
+Wire Wire Line
+	1900 3150 1900 3200
+Wire Wire Line
+	1900 3450 1900 3500
+Wire Wire Line
+	1900 3750 1900 3800
+Wire Wire Line
+	1350 2900 1900 2900
+Wire Wire Line
+	1350 3200 1900 3200
+Wire Wire Line
+	1350 3500 1900 3500
+Wire Wire Line
+	1350 3800 1900 3800
+$Comp
+L base:ToprePad TP5
+U 1 1 5FDD380F
+P 1900 2750
+F 0 "TP5" H 1975 2500 60  0001 R CNN
+F 1 "ToprePad" H 1875 2425 60  0001 C CNN
+F 2 "base:ToprePad" H 1900 2750 60  0001 C CNN
+F 3 "" H 1900 2750 60  0001 C CNN
+	1    1900 2750
+	0    -1   1    0
+$EndComp
+$Comp
+L power:GND #PWR0106
+U 1 1 5FDD3816
+P 2100 3850
+F 0 "#PWR0106" H 2100 3600 50  0001 C CNN
+F 1 "GND" H 2105 3677 50  0000 C CNN
+F 2 "" H 2100 3850 50  0001 C CNN
+F 3 "" H 2100 3850 50  0001 C CNN
+	1    2100 3850
+	1    0    0    -1
+$EndComp
+$Comp
+L base:ToprePad TP6
+U 1 1 5FDD381F
+P 1900 3050
+F 0 "TP6" H 1975 2800 60  0001 R CNN
+F 1 "ToprePad" H 1875 2725 60  0001 C CNN
+F 2 "base:ToprePad" H 1900 3050 60  0001 C CNN
+F 3 "" H 1900 3050 60  0001 C CNN
+	1    1900 3050
+	0    -1   1    0
+$EndComp
+$Comp
+L base:ToprePad TP7
+U 1 1 5FDD3826
+P 1900 3350
+F 0 "TP7" H 1975 3100 60  0001 R CNN
+F 1 "ToprePad" H 1875 3025 60  0001 C CNN
+F 2 "base:ToprePad" H 1900 3350 60  0001 C CNN
+F 3 "" H 1900 3350 60  0001 C CNN
+	1    1900 3350
+	0    -1   1    0
+$EndComp
+$Comp
+L base:ToprePad TP8
+U 1 1 5FDD382D
+P 1900 3650
+F 0 "TP8" H 1975 3400 60  0001 R CNN
+F 1 "ToprePad" H 1875 3325 60  0001 C CNN
+F 2 "base:ToprePad" H 1900 3650 60  0001 C CNN
+F 3 "" H 1900 3650 60  0001 C CNN
+	1    1900 3650
+	0    -1   1    0
+$EndComp
+Wire Wire Line
+	2000 2850 2100 2850
+Wire Wire Line
+	2000 3150 2100 3150
+Wire Wire Line
+	2000 3450 2100 3450
+Connection ~ 2100 3450
+Wire Wire Line
+	2100 3450 2100 3750
+Wire Wire Line
+	2000 3750 2100 3750
+Wire Wire Line
+	2100 3150 2100 3450
+Wire Wire Line
+	2100 3850 2100 3750
+Connection ~ 2100 3750
+Wire Wire Line
+	1900 2900 2450 2900
+Wire Wire Line
+	1900 3200 2450 3200
+Wire Wire Line
+	1900 3500 2450 3500
+$Comp
+L base:ToprePad TP9
+U 1 1 5FDE5500
+P 2450 2750
+F 0 "TP9" H 2525 2500 60  0001 R CNN
+F 1 "ToprePad" H 2425 2425 60  0001 C CNN
+F 2 "base:ToprePad" H 2450 2750 60  0001 C CNN
+F 3 "" H 2450 2750 60  0001 C CNN
+	1    2450 2750
+	0    -1   1    0
+$EndComp
+Text GLabel 2250 2500 1    50   Input ~ 0
+col2
+$Comp
+L power:GND #PWR0107
+U 1 1 5FDE5507
+P 2650 3850
+F 0 "#PWR0107" H 2650 3600 50  0001 C CNN
+F 1 "GND" H 2655 3677 50  0000 C CNN
+F 2 "" H 2650 3850 50  0001 C CNN
+F 3 "" H 2650 3850 50  0001 C CNN
+	1    2650 3850
+	1    0    0    -1
+$EndComp
+Wire Wire Line
+	2250 2500 2250 2850
+Wire Wire Line
+	2350 2850 2250 2850
+Connection ~ 2250 2850
+$Comp
+L base:ToprePad TP10
+U 1 1 5FDE5510
+P 2450 3050
+F 0 "TP10" H 2525 2800 60  0001 R CNN
+F 1 "ToprePad" H 2425 2725 60  0001 C CNN
+F 2 "base:ToprePad" H 2450 3050 60  0001 C CNN
+F 3 "" H 2450 3050 60  0001 C CNN
+	1    2450 3050
+	0    -1   1    0
+$EndComp
+Wire Wire Line
+	2350 3150 2250 3150
+$Comp
+L base:ToprePad TP11
+U 1 1 5FDE5517
+P 2450 3350
+F 0 "TP11" H 2525 3100 60  0001 R CNN
+F 1 "ToprePad" H 2425 3025 60  0001 C CNN
+F 2 "base:ToprePad" H 2450 3350 60  0001 C CNN
+F 3 "" H 2450 3350 60  0001 C CNN
+	1    2450 3350
+	0    -1   1    0
+$EndComp
+Wire Wire Line
+	2350 3450 2250 3450
+$Comp
+L base:ToprePad TP12
+U 1 1 5FDE551E
+P 2450 3650
+F 0 "TP12" H 2525 3400 60  0001 R CNN
+F 1 "ToprePad" H 2425 3325 60  0001 C CNN
+F 2 "base:ToprePad" H 2450 3650 60  0001 C CNN
+F 3 "" H 2450 3650 60  0001 C CNN
+	1    2450 3650
+	0    -1   1    0
+$EndComp
+Wire Wire Line
+	2350 3750 2250 3750
+Wire Wire Line
+	2250 2850 2250 3150
+Connection ~ 2250 3150
+Wire Wire Line
+	2250 3150 2250 3450
+Wire Wire Line
+	2550 2850 2650 2850
+Wire Wire Line
+	2550 3150 2650 3150
+Connection ~ 2650 3150
+Wire Wire Line
+	2550 3450 2650 3450
+Connection ~ 2650 3450
+Wire Wire Line
+	2650 3450 2650 3750
+Wire Wire Line
+	2550 3750 2650 3750
+Connection ~ 2250 3450
+Wire Wire Line
+	2650 3150 2650 3450
+Wire Wire Line
+	2250 3450 2250 3750
+Wire Wire Line
+	2450 2850 2450 2900
+Wire Wire Line
+	2450 3150 2450 3200
+Wire Wire Line
+	2450 3450 2450 3500
+Wire Wire Line
+	2450 3750 2450 3800
+Wire Wire Line
+	2650 3850 2650 3750
+Connection ~ 2650 3750
+Wire Wire Line
+	2450 2900 3000 2900
+Wire Wire Line
+	2450 3200 3000 3200
+Wire Wire Line
+	2450 3500 3000 3500
+Wire Wire Line
+	2450 3800 3000 3800
+$Comp
+L base:ToprePad TP13
+U 1 1 5FDF7EDB
+P 3000 2750
+F 0 "TP13" H 3075 2500 60  0001 R CNN
+F 1 "ToprePad" H 2975 2425 60  0001 C CNN
+F 2 "base:ToprePad" H 3000 2750 60  0001 C CNN
+F 3 "" H 3000 2750 60  0001 C CNN
+	1    3000 2750
+	0    -1   1    0
+$EndComp
+Text GLabel 2800 2500 1    50   Input ~ 0
+col3
+$Comp
+L power:GND #PWR0108
+U 1 1 5FDF7EE2
+P 3200 3850
+F 0 "#PWR0108" H 3200 3600 50  0001 C CNN
+F 1 "GND" H 3205 3677 50  0000 C CNN
+F 2 "" H 3200 3850 50  0001 C CNN
+F 3 "" H 3200 3850 50  0001 C CNN
+	1    3200 3850
+	1    0    0    -1
+$EndComp
+Wire Wire Line
+	2800 2500 2800 2850
+Wire Wire Line
+	2900 2850 2800 2850
+Connection ~ 2800 2850
+$Comp
+L base:ToprePad TP14
+U 1 1 5FDF7EEB
+P 3000 3050
+F 0 "TP14" H 3075 2800 60  0001 R CNN
+F 1 "ToprePad" H 2975 2725 60  0001 C CNN
+F 2 "base:ToprePad" H 3000 3050 60  0001 C CNN
+F 3 "" H 3000 3050 60  0001 C CNN
+	1    3000 3050
+	0    -1   1    0
+$EndComp
+Wire Wire Line
+	2900 3150 2800 3150
+$Comp
+L base:ToprePad TP15
+U 1 1 5FDF7EF2
+P 3000 3350
+F 0 "TP15" H 3075 3100 60  0001 R CNN
+F 1 "ToprePad" H 2975 3025 60  0001 C CNN
+F 2 "base:ToprePad" H 3000 3350 60  0001 C CNN
+F 3 "" H 3000 3350 60  0001 C CNN
+	1    3000 3350
+	0    -1   1    0
+$EndComp
+Wire Wire Line
+	2900 3450 2800 3450
+$Comp
+L base:ToprePad TP16
+U 1 1 5FDF7EF9
+P 3000 3650
+F 0 "TP16" H 3075 3400 60  0001 R CNN
+F 1 "ToprePad" H 2975 3325 60  0001 C CNN
+F 2 "base:ToprePad" H 3000 3650 60  0001 C CNN
+F 3 "" H 3000 3650 60  0001 C CNN
+	1    3000 3650
+	0    -1   1    0
+$EndComp
+Wire Wire Line
+	2900 3750 2800 3750
+Wire Wire Line
+	2800 2850 2800 3150
+Connection ~ 2800 3150
+Wire Wire Line
+	2800 3150 2800 3450
+Wire Wire Line
+	3100 2850 3200 2850
+Wire Wire Line
+	3100 3150 3200 3150
+Connection ~ 3200 3150
+Wire Wire Line
+	3100 3450 3200 3450
+Connection ~ 3200 3450
+Wire Wire Line
+	3200 3450 3200 3750
+Wire Wire Line
+	3100 3750 3200 3750
+Connection ~ 2800 3450
+Wire Wire Line
+	3200 3150 3200 3450
+Wire Wire Line
+	2800 3450 2800 3750
+Wire Wire Line
+	3000 2850 3000 2900
+Wire Wire Line
+	3000 3150 3000 3200
+Wire Wire Line
+	3000 3450 3000 3500
+Wire Wire Line
+	3000 3750 3000 3800
+Wire Wire Line
+	3200 3850 3200 3750
+Connection ~ 3200 3750
+Wire Wire Line
+	3000 2900 3550 2900
+Wire Wire Line
+	3000 3200 3550 3200
+Wire Wire Line
+	3000 3500 3550 3500
+Wire Wire Line
+	3000 3800 3550 3800
+$Comp
+L base:ToprePad TP17
+U 1 1 5FE0E7FC
+P 3550 2750
+F 0 "TP17" H 3625 2500 60  0001 R CNN
+F 1 "ToprePad" H 3525 2425 60  0001 C CNN
+F 2 "base:ToprePad" H 3550 2750 60  0001 C CNN
+F 3 "" H 3550 2750 60  0001 C CNN
+	1    3550 2750
+	0    -1   1    0
+$EndComp
+Text GLabel 3350 2500 1    50   Input ~ 0
+col4
+$Comp
+L power:GND #PWR0109
+U 1 1 5FE0E803
+P 3750 3850
+F 0 "#PWR0109" H 3750 3600 50  0001 C CNN
+F 1 "GND" H 3755 3677 50  0000 C CNN
+F 2 "" H 3750 3850 50  0001 C CNN
+F 3 "" H 3750 3850 50  0001 C CNN
+	1    3750 3850
+	1    0    0    -1
+$EndComp
+Wire Wire Line
+	3350 2500 3350 2850
+Wire Wire Line
+	3450 2850 3350 2850
+Connection ~ 3350 2850
+$Comp
+L base:ToprePad TP18
+U 1 1 5FE0E80C
+P 3550 3050
+F 0 "TP18" H 3625 2800 60  0001 R CNN
+F 1 "ToprePad" H 3525 2725 60  0001 C CNN
+F 2 "base:ToprePad" H 3550 3050 60  0001 C CNN
+F 3 "" H 3550 3050 60  0001 C CNN
+	1    3550 3050
+	0    -1   1    0
+$EndComp
+Wire Wire Line
+	3450 3150 3350 3150
+$Comp
+L base:ToprePad TP19
+U 1 1 5FE0E813
+P 3550 3350
+F 0 "TP19" H 3625 3100 60  0001 R CNN
+F 1 "ToprePad" H 3525 3025 60  0001 C CNN
+F 2 "base:ToprePad" H 3550 3350 60  0001 C CNN
+F 3 "" H 3550 3350 60  0001 C CNN
+	1    3550 3350
+	0    -1   1    0
+$EndComp
+Wire Wire Line
+	3450 3450 3350 3450
+$Comp
+L base:ToprePad TP20
+U 1 1 5FE0E81A
+P 3550 3650
+F 0 "TP20" H 3625 3400 60  0001 R CNN
+F 1 "ToprePad" H 3525 3325 60  0001 C CNN
+F 2 "base:ToprePad" H 3550 3650 60  0001 C CNN
+F 3 "" H 3550 3650 60  0001 C CNN
+	1    3550 3650
+	0    -1   1    0
+$EndComp
+Wire Wire Line
+	3450 3750 3350 3750
+Wire Wire Line
+	3350 2850 3350 3150
+Connection ~ 3350 3150
+Wire Wire Line
+	3350 3150 3350 3450
+Wire Wire Line
+	3650 2850 3750 2850
+Wire Wire Line
+	3650 3150 3750 3150
+Connection ~ 3750 3150
+Wire Wire Line
+	3650 3450 3750 3450
+Connection ~ 3750 3450
+Wire Wire Line
+	3750 3450 3750 3750
+Wire Wire Line
+	3650 3750 3750 3750
+Connection ~ 3350 3450
+Wire Wire Line
+	3750 3150 3750 3450
+Wire Wire Line
+	3350 3450 3350 3750
+Wire Wire Line
+	3550 2850 3550 2900
+Wire Wire Line
+	3550 3150 3550 3200
+Wire Wire Line
+	3550 3450 3550 3500
+Wire Wire Line
+	3550 3750 3550 3800
+Wire Wire Line
+	3750 3850 3750 3750
+Connection ~ 3750 3750
+Wire Wire Line
+	3550 2900 4100 2900
+Wire Wire Line
+	3550 3200 4100 3200
+Wire Wire Line
+	3550 3500 4100 3500
+Wire Wire Line
+	3550 3800 4100 3800
+$Comp
+L base:ToprePad TP21
+U 1 1 5FE286B2
+P 4100 2750
+F 0 "TP21" H 4175 2500 60  0001 R CNN
+F 1 "ToprePad" H 4075 2425 60  0001 C CNN
+F 2 "base:ToprePad" H 4100 2750 60  0001 C CNN
+F 3 "" H 4100 2750 60  0001 C CNN
+	1    4100 2750
+	0    -1   1    0
+$EndComp
+Text GLabel 3900 2500 1    50   Input ~ 0
+col5
+$Comp
+L power:GND #PWR0110
+U 1 1 5FE286B9
+P 4300 3850
+F 0 "#PWR0110" H 4300 3600 50  0001 C CNN
+F 1 "GND" H 4305 3677 50  0000 C CNN
+F 2 "" H 4300 3850 50  0001 C CNN
+F 3 "" H 4300 3850 50  0001 C CNN
+	1    4300 3850
+	1    0    0    -1
+$EndComp
+Wire Wire Line
+	3900 2500 3900 2850
+Wire Wire Line
+	4000 2850 3900 2850
+Connection ~ 3900 2850
+$Comp
+L base:ToprePad TP22
+U 1 1 5FE286C2
+P 4100 3050
+F 0 "TP22" H 4175 2800 60  0001 R CNN
+F 1 "ToprePad" H 4075 2725 60  0001 C CNN
+F 2 "base:ToprePad" H 4100 3050 60  0001 C CNN
+F 3 "" H 4100 3050 60  0001 C CNN
+	1    4100 3050
+	0    -1   1    0
+$EndComp
+Wire Wire Line
+	4000 3150 3900 3150
+$Comp
+L base:ToprePad TP23
+U 1 1 5FE286C9
+P 4100 3350
+F 0 "TP23" H 4175 3100 60  0001 R CNN
+F 1 "ToprePad" H 4075 3025 60  0001 C CNN
+F 2 "base:ToprePad" H 4100 3350 60  0001 C CNN
+F 3 "" H 4100 3350 60  0001 C CNN
+	1    4100 3350
+	0    -1   1    0
+$EndComp
+Wire Wire Line
+	4000 3450 3900 3450
+$Comp
+L base:ToprePad TP24
+U 1 1 5FE286D0
+P 4100 3650
+F 0 "TP24" H 4175 3400 60  0001 R CNN
+F 1 "ToprePad" H 4075 3325 60  0001 C CNN
+F 2 "base:ToprePad" H 4100 3650 60  0001 C CNN
+F 3 "" H 4100 3650 60  0001 C CNN
+	1    4100 3650
+	0    -1   1    0
+$EndComp
+Wire Wire Line
+	4000 3750 3900 3750
+Wire Wire Line
+	3900 2850 3900 3150
+Connection ~ 3900 3150
+Wire Wire Line
+	3900 3150 3900 3450
+Wire Wire Line
+	4200 2850 4300 2850
+Wire Wire Line
+	4200 3150 4300 3150
+Connection ~ 4300 3150
+Wire Wire Line
+	4200 3450 4300 3450
+Connection ~ 4300 3450
+Wire Wire Line
+	4300 3450 4300 3750
+Wire Wire Line
+	4200 3750 4300 3750
+Connection ~ 3900 3450
+Wire Wire Line
+	4300 3150 4300 3450
+Wire Wire Line
+	3900 3450 3900 3750
+Wire Wire Line
+	4100 2850 4100 2900
+Wire Wire Line
+	4100 3150 4100 3200
+Wire Wire Line
+	4100 3450 4100 3500
+Wire Wire Line
+	4100 3750 4100 3800
+Wire Wire Line
+	4300 3850 4300 3750
+Connection ~ 4300 3750
+Wire Wire Line
+	4100 2900 4650 2900
+Wire Wire Line
+	4100 3200 4650 3200
+Wire Wire Line
+	4100 3500 4650 3500
+Wire Wire Line
+	4100 3800 4650 3800
+$Comp
+L base:ToprePad TP25
+U 1 1 5FE46F49
+P 4650 2750
+F 0 "TP25" H 4725 2500 60  0001 R CNN
+F 1 "ToprePad" H 4625 2425 60  0001 C CNN
+F 2 "base:ToprePad" H 4650 2750 60  0001 C CNN
+F 3 "" H 4650 2750 60  0001 C CNN
+	1    4650 2750
+	0    -1   1    0
+$EndComp
+Text GLabel 4450 2500 1    50   Input ~ 0
+col6
+$Comp
+L power:GND #PWR0111
+U 1 1 5FE46F50
+P 4850 3850
+F 0 "#PWR0111" H 4850 3600 50  0001 C CNN
+F 1 "GND" H 4855 3677 50  0000 C CNN
+F 2 "" H 4850 3850 50  0001 C CNN
+F 3 "" H 4850 3850 50  0001 C CNN
+	1    4850 3850
+	1    0    0    -1
+$EndComp
+Wire Wire Line
+	4450 2500 4450 2850
+Wire Wire Line
+	4550 2850 4450 2850
+Connection ~ 4450 2850
+$Comp
+L base:ToprePad TP26
+U 1 1 5FE46F59
+P 4650 3050
+F 0 "TP26" H 4725 2800 60  0001 R CNN
+F 1 "ToprePad" H 4625 2725 60  0001 C CNN
+F 2 "base:ToprePad" H 4650 3050 60  0001 C CNN
+F 3 "" H 4650 3050 60  0001 C CNN
+	1    4650 3050
+	0    -1   1    0
+$EndComp
+Wire Wire Line
+	4550 3150 4450 3150
+$Comp
+L base:ToprePad TP27
+U 1 1 5FE46F60
+P 4650 3350
+F 0 "TP27" H 4725 3100 60  0001 R CNN
+F 1 "ToprePad" H 4625 3025 60  0001 C CNN
+F 2 "base:ToprePad" H 4650 3350 60  0001 C CNN
+F 3 "" H 4650 3350 60  0001 C CNN
+	1    4650 3350
+	0    -1   1    0
+$EndComp
+Wire Wire Line
+	4550 3450 4450 3450
+$Comp
+L base:ToprePad TP28
+U 1 1 5FE46F67
+P 4650 3650
+F 0 "TP28" H 4725 3400 60  0001 R CNN
+F 1 "ToprePad" H 4625 3325 60  0001 C CNN
+F 2 "base:ToprePad" H 4650 3650 60  0001 C CNN
+F 3 "" H 4650 3650 60  0001 C CNN
+	1    4650 3650
+	0    -1   1    0
+$EndComp
+Wire Wire Line
+	4550 3750 4450 3750
+Wire Wire Line
+	4450 2850 4450 3150
+Connection ~ 4450 3150
+Wire Wire Line
+	4450 3150 4450 3450
+Wire Wire Line
+	4750 2850 4850 2850
+Wire Wire Line
+	4750 3150 4850 3150
+Connection ~ 4850 3150
+Wire Wire Line
+	4750 3450 4850 3450
+Connection ~ 4850 3450
+Wire Wire Line
+	4850 3450 4850 3750
+Wire Wire Line
+	4750 3750 4850 3750
+Connection ~ 4450 3450
+Wire Wire Line
+	4850 3150 4850 3450
+Wire Wire Line
+	4450 3450 4450 3750
+Wire Wire Line
+	4650 2850 4650 2900
+Wire Wire Line
+	4650 3150 4650 3200
+Wire Wire Line
+	4650 3450 4650 3500
+Wire Wire Line
+	4650 3750 4650 3800
+Wire Wire Line
+	4850 3850 4850 3750
+Connection ~ 4850 3750
+Wire Wire Line
+	4650 2900 5200 2900
+Wire Wire Line
+	4650 3200 5200 3200
+Wire Wire Line
+	4650 3500 5200 3500
+Wire Wire Line
+	4650 3800 5200 3800
+Connection ~ 1900 2900
+Connection ~ 2450 2900
+Connection ~ 3000 2900
+Connection ~ 3550 2900
+Connection ~ 4100 2900
+Connection ~ 4650 2900
+Connection ~ 1900 3200
+Connection ~ 2450 3200
+Connection ~ 3000 3200
+Connection ~ 3550 3200
+Connection ~ 4100 3200
+Connection ~ 4650 3200
+Connection ~ 1900 3500
+Connection ~ 2450 3500
+Connection ~ 3000 3500
+Connection ~ 3550 3500
+Connection ~ 4100 3500
+Connection ~ 4650 3500
+Connection ~ 4650 3800
+Connection ~ 4100 3800
+Connection ~ 3550 3800
+Connection ~ 3000 3800
+Wire Wire Line
+	1900 3800 2450 3800
+Connection ~ 2450 3800
+Connection ~ 1900 3800
+Text GLabel 1700 2500 1    50   Input ~ 0
+col1
+Wire Wire Line
+	1550 2850 1550 3150
+Connection ~ 1550 3150
+Wire Wire Line
+	2100 2850 2100 3150
+Connection ~ 2100 3150
+$Comp
+L power:GND #PWR?
+U 1 1 5EA3D89C
+P 4850 7300
+F 0 "#PWR?" H 4850 7050 50  0001 C CNN
+F 1 "GND" H 4855 7127 50  0000 C CNN
+F 2 "" H 4850 7300 50  0001 C CNN
+F 3 "" H 4850 7300 50  0001 C CNN
+	1    4850 7300
+	1    0    0    -1
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 5EA5539C
+P 4850 7200
+F 0 "#PWR?" H 4850 7050 50  0001 C CNN
+F 1 "+5V" V 4865 7328 50  0000 L CNN
+F 2 "" H 4850 7200 50  0001 C CNN
+F 3 "" H 4850 7200 50  0001 C CNN
+	1    4850 7200
+	0    -1   -1   0
+$EndComp
+Connection ~ 2650 3100
+Wire Wire Line
+	2650 3100 2650 3150
+Connection ~ 3200 3100
+Wire Wire Line
+	3200 3100 3200 3150
+Connection ~ 3750 3100
+Wire Wire Line
+	3750 3100 3750 3150
+Connection ~ 4300 3100
+Wire Wire Line
+	4300 3100 4300 3150
+Connection ~ 4850 3100
+Wire Wire Line
+	4850 3100 4850 3150
+Wire Wire Line
+	2650 2850 2650 3150
+Wire Wire Line
+	3200 2850 3200 3150
+Wire Wire Line
+	3750 2850 3750 3150
+Wire Wire Line
+	4300 2850 4300 3150
+Wire Wire Line
+	4850 2850 4850 3150
+$EndSCHEMATC
