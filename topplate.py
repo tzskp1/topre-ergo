@@ -22,6 +22,5 @@ z = list(filter(lambda x: x[1] == Symbol("base:ToprePad"), y))
 sws = list(map(lambda y: list(filter(lambda x: x[0] == Symbol("at") if isinstance(x, list) else False, y))[0], z))
 z = list(filter(lambda x: x[1] == Symbol("MountingHole:MountingHole_2.2mm_M2"), y))
 holes = list(map(lambda y: list(filter(lambda x: x[0] == Symbol("at") if isinstance(x, list) else False, y))[0], z))
-
 u = union()(*(list(map(parse, sws)) + list(map(parse_hole, holes))))
 scad_render_to_file(u, "holes.scad")
