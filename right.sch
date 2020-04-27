@@ -1227,7 +1227,7 @@ Wire Wire Line
 Wire Wire Line
 	4200 4700 5300 4700
 Wire Wire Line
-	5300 4700 5300 3500
+	5300 4700 5300 4000
 Connection ~ 5300 3500
 Wire Wire Line
 	4200 5200 5300 5200
@@ -1287,17 +1287,6 @@ F 3 "~" H 5450 5350 50  0001 C CNN
 	1    5450 5350
 	1    0    0    -1  
 $EndComp
-NoConn ~ 4200 3300
-NoConn ~ 4200 3400
-NoConn ~ 4200 3900
-NoConn ~ 4200 4000
-NoConn ~ 4200 4100
-NoConn ~ 4200 4200
-NoConn ~ 4200 4500
-NoConn ~ 4200 4600
-NoConn ~ 4200 5100
-NoConn ~ 4200 5400
-NoConn ~ 4200 5300
 $Comp
 L Device:Polyfuse F1
 U 1 1 5EC51259
@@ -1804,4 +1793,65 @@ F 3 "~" H 3200 7200 50  0001 C CNN
 	1    3200 7200
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	4200 4000 5300 4000
+Connection ~ 5300 4000
+Wire Wire Line
+	5300 4000 5300 3500
+Text GLabel 7500 3500 0    50   Input ~ 0
+read
+Text GLabel 8900 3000 2    50   Input ~ 0
+drain
+Text GLabel 8900 3100 2    50   Input ~ 0
+inh
+Text GLabel 8900 4200 2    50   Input ~ 0
+sela
+Text GLabel 8900 4300 2    50   Input ~ 0
+selb
+Text GLabel 8900 2100 2    50   Input ~ 0
+col0
+Text GLabel 8900 2200 2    50   Input ~ 0
+col1
+Text GLabel 8900 2300 2    50   Input ~ 0
+col2
+Text GLabel 8900 2400 2    50   Input ~ 0
+col3
+Text GLabel 8900 2500 2    50   Input ~ 0
+col4
+Text GLabel 8900 2600 2    50   Input ~ 0
+col5
+Text GLabel 8900 2700 2    50   Input ~ 0
+col6
+Text GLabel 8900 3300 2    50   BiDi ~ 0
+scl
+Text GLabel 8900 3400 2    50   BiDi ~ 0
+sda
+Wire Wire Line
+	10000 1450 10000 1350
+$Comp
+L power:GND #PWR?
+U 1 1 5EB12A9E
+P 10000 1550
+F 0 "#PWR?" H 10000 1300 50  0001 C CNN
+F 1 "GND" H 10005 1377 50  0000 C CNN
+F 2 "" H 10000 1550 50  0001 C CNN
+F 3 "" H 10000 1550 50  0001 C CNN
+	1    10000 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5EB13325
+P 10000 1050
+F 0 "#PWR?" H 10000 900 50  0001 C CNN
+F 1 "VCC" H 10017 1223 50  0000 C CNN
+F 2 "" H 10000 1050 50  0001 C CNN
+F 3 "" H 10000 1050 50  0001 C CNN
+	1    10000 1050
+	1    0    0    -1  
+$EndComp
+Text GLabel 10000 1150 2    50   BiDi ~ 0
+scl
+Text GLabel 10000 1350 2    50   BiDi ~ 0
+sda
 $EndSCHEMATC
