@@ -4,13 +4,15 @@ from sexpdata import load, Symbol
 from solid import *
 from solid.utils import *
 
+hole = polygon([[-7, 6.3], [-6.3, 7], [6.3, 7], [7, 6.3], [7, -6.3], [6.3, -7], [-6.3, -7], [-7, -6.3]])
+
 def parse(p):
     try:
         _, x, y, deg = p
-        return (translate ([x, -y, 0.0])(rotate(deg, [0, 0, 1])(square(14, True))))
+        return (translate ([x, -y, 0.0])(rotate(deg, [0, 0, 1])(hole)))
     except Exception:
         _, x, y = p
-        return (translate ([x, -y, 0.0])(square(14, True)))
+        return (translate ([x, -y, 0.0])(hole))
 
 def parse_hole(p):
     _, x, y = p

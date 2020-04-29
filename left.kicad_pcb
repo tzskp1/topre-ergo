@@ -2788,7 +2788,7 @@
   (gr_line (start 145.161 136.144) (end 125.349 147.574) (angle 90) (layer Edge.Cuts) (width 0.15))
   (gr_line (start 145.161 48.006) (end 129.667 57.912) (angle 90) (layer Edge.Cuts) (width 0.15))
   (gr_line (start 156.337 48.006) (end 147.701 48.006) (angle 90) (layer Edge.Cuts) (width 0.15))
-  (target plus (at 241.935 136.398) (size 5) (width 0.15) (layer Edge.Cuts))
+  (target plus (at 241.935 136.398) (size 3) (width 0.15) (layer Edge.Cuts))
   (gr_line (start 107.061 103.378) (end 107.060999 112.797994) (angle 90) (layer Edge.Cuts) (width 0.15))
   (gr_line (start 113.665 67.564) (end 109.347 67.564) (angle 90) (layer Edge.Cuts) (width 0.15))
   (gr_line (start 115.951 57.912) (end 115.951 65.278) (angle 90) (layer Edge.Cuts) (width 0.15))
