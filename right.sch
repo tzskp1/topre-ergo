@@ -22,7 +22,7 @@ F 1 "GND" H 1505 3677 50  0000 C CNN
 F 2 "" H 1500 3850 50  0001 C CNN
 F 3 "" H 1500 3850 50  0001 C CNN
 	1    1500 3850
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0102
@@ -33,7 +33,7 @@ F 1 "GND" H 955 3677 50  0000 C CNN
 F 2 "" H 950 3850 50  0001 C CNN
 F 3 "" H 950 3850 50  0001 C CNN
 	1    950  3850
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 Text GLabel 2050 3050 1    50   Input ~ 0
 row0
@@ -46,7 +46,7 @@ F 1 "74VHC4051AFT" H 1225 4084 50  0000 C CNN
 F 2 "base:TSSOP16" H 1300 3700 50  0001 C CNN
 F 3 "" H 1300 3700 50  0001 C CNN
 	1    1200 3550
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	950  3750 950  3850
@@ -92,7 +92,7 @@ F 1 "ToprePad" H 875 825 60  0001 C CNN
 F 2 "base:ToprePad" H 900 1150 60  0001 C CNN
 F 3 "" H 900 1150 60  0001 C CNN
 	1    900  1150
-	0    -1   1    0
+	0    -1   1    0   
 $EndComp
 Text GLabel 700  900  1    50   Input ~ 0
 col0
@@ -113,7 +113,7 @@ F 1 "GS8051-TR" H 2025 5084 50  0000 C CNN
 F 2 "base:SOT-23-5" H 2025 5083 50  0001 C CNN
 F 3 "" H 2050 4850 50  0001 C CNN
 	1    2050 4850
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0103
@@ -124,7 +124,7 @@ F 1 "GND" H 1505 4877 50  0000 C CNN
 F 2 "" H 1500 5050 50  0001 C CNN
 F 3 "" H 1500 5050 50  0001 C CNN
 	1    1500 5050
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	1500 5050 1500 4850
@@ -155,7 +155,7 @@ F 1 "22k" V 2616 3250 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 2430 3250 50  0001 C CNN
 F 3 "~" H 2500 3250 50  0001 C CNN
 	1    2500 3250
-	0    -1   -1   0
+	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:R R2
@@ -166,7 +166,7 @@ F 1 "22k" V 2616 3350 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 2430 3350 50  0001 C CNN
 F 3 "~" H 2500 3350 50  0001 C CNN
 	1    2500 3350
-	0    -1   -1   0
+	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:R R3
@@ -177,7 +177,7 @@ F 1 "22k" V 2616 3450 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 2430 3450 50  0001 C CNN
 F 3 "~" H 2500 3450 50  0001 C CNN
 	1    2500 3450
-	0    -1   -1   0
+	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:R R4
@@ -188,7 +188,7 @@ F 1 "22k" V 2616 3550 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 2430 3550 50  0001 C CNN
 F 3 "~" H 2500 3550 50  0001 C CNN
 	1    2500 3550
-	0    -1   -1   0
+	0    -1   -1   0   
 $EndComp
 Wire Wire Line
 	2350 3250 1850 3250
@@ -219,7 +219,7 @@ F 1 "GND" H 2655 3377 50  0000 C CNN
 F 2 "" H 2650 3550 50  0001 C CNN
 F 3 "" H 2650 3550 50  0001 C CNN
 	1    2650 3550
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 Connection ~ 2650 3550
 Text GLabel 1000 4950 0    50   Input ~ 0
@@ -233,7 +233,7 @@ F 1 "330" V 1366 4950 50  0000 C CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 1180 4950 50  0001 C CNN
 F 3 "~" H 1250 4950 50  0001 C CNN
 	1    1250 4950
-	0    -1   -1   0
+	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:R R7
@@ -244,7 +244,7 @@ F 1 "56k" H 2070 4305 50  0000 L CNN
 F 2 "Resistor_SMD:R_1206_3216Metric" V 1930 4350 50  0001 C CNN
 F 3 "~" H 2000 4350 50  0001 C CNN
 	1    2000 4350
-	0    -1   -1   0
+	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:R R8
@@ -255,7 +255,7 @@ F 1 "270" V 2666 5050 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 2480 5050 50  0001 C CNN
 F 3 "~" H 2550 5050 50  0001 C CNN
 	1    2550 5050
-	-1   0    0    1
+	-1   0    0    1   
 $EndComp
 $Comp
 L Device:R R5
@@ -266,7 +266,7 @@ F 1 "1k" H 1120 4555 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 980 4600 50  0001 C CNN
 F 3 "~" H 1050 4600 50  0001 C CNN
 	1    1050 4600
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	1000 4950 1050 4950
@@ -286,7 +286,7 @@ F 1 "GND" H 1105 2077 50  0000 C CNN
 F 2 "" H 1100 2250 50  0001 C CNN
 F 3 "" H 1100 2250 50  0001 C CNN
 	1    1100 2250
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C C1
@@ -297,7 +297,7 @@ F 1 "1n" H 1165 5305 50  0000 L CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" H 1088 5200 50  0001 C CNN
 F 3 "~" H 1050 5350 50  0001 C CNN
 	1    1050 5350
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	1050 4950 1050 5200
@@ -310,7 +310,7 @@ F 1 "GND" H 1055 5327 50  0000 C CNN
 F 2 "" H 1050 5500 50  0001 C CNN
 F 3 "" H 1050 5500 50  0001 C CNN
 	1    1050 5500
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 Text GLabel 1050 4450 1    50   Output ~ 0
 drain
@@ -339,7 +339,7 @@ F 1 "GND" H 2555 5027 50  0000 C CNN
 F 2 "" H 2550 5200 50  0001 C CNN
 F 3 "" H 2550 5200 50  0001 C CNN
 	1    2550 5200
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	1600 3150 1500 3150
@@ -357,7 +357,7 @@ F 1 "ToprePad" H 875 1125 60  0001 C CNN
 F 2 "base:ToprePad" H 900 1450 60  0001 C CNN
 F 3 "" H 900 1450 60  0001 C CNN
 	1    900  1450
-	0    -1   1    0
+	0    -1   1    0   
 $EndComp
 Wire Wire Line
 	800  1550 700  1550
@@ -370,7 +370,7 @@ F 1 "ToprePad" H 875 1425 60  0001 C CNN
 F 2 "base:ToprePad" H 900 1750 60  0001 C CNN
 F 3 "" H 900 1750 60  0001 C CNN
 	1    900  1750
-	0    -1   1    0
+	0    -1   1    0   
 $EndComp
 Wire Wire Line
 	800  1850 700  1850
@@ -383,7 +383,7 @@ F 1 "ToprePad" H 875 1725 60  0001 C CNN
 F 2 "base:ToprePad" H 900 2050 60  0001 C CNN
 F 3 "" H 900 2050 60  0001 C CNN
 	1    900  2050
-	0    -1   1    0
+	0    -1   1    0   
 $EndComp
 Wire Wire Line
 	800  2150 700  2150
@@ -463,7 +463,7 @@ F 1 "ToprePad" H 1425 825 60  0001 C CNN
 F 2 "base:ToprePad" H 1450 1150 60  0001 C CNN
 F 3 "" H 1450 1150 60  0001 C CNN
 	1    1450 1150
-	0    -1   1    0
+	0    -1   1    0   
 $EndComp
 $Comp
 L power:GND #PWR0106
@@ -474,7 +474,7 @@ F 1 "GND" H 1655 2077 50  0000 C CNN
 F 2 "" H 1650 2250 50  0001 C CNN
 F 3 "" H 1650 2250 50  0001 C CNN
 	1    1650 2250
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 $Comp
 L base:ToprePad TP6
@@ -485,7 +485,7 @@ F 1 "ToprePad" H 1425 1125 60  0001 C CNN
 F 2 "base:ToprePad" H 1450 1450 60  0001 C CNN
 F 3 "" H 1450 1450 60  0001 C CNN
 	1    1450 1450
-	0    -1   1    0
+	0    -1   1    0   
 $EndComp
 $Comp
 L base:ToprePad TP7
@@ -496,7 +496,7 @@ F 1 "ToprePad" H 1425 1425 60  0001 C CNN
 F 2 "base:ToprePad" H 1450 1750 60  0001 C CNN
 F 3 "" H 1450 1750 60  0001 C CNN
 	1    1450 1750
-	0    -1   1    0
+	0    -1   1    0   
 $EndComp
 $Comp
 L base:ToprePad TP8
@@ -507,7 +507,7 @@ F 1 "ToprePad" H 1425 1725 60  0001 C CNN
 F 2 "base:ToprePad" H 1450 2050 60  0001 C CNN
 F 3 "" H 1450 2050 60  0001 C CNN
 	1    1450 2050
-	0    -1   1    0
+	0    -1   1    0   
 $EndComp
 Wire Wire Line
 	1550 1250 1650 1250
@@ -540,7 +540,7 @@ F 1 "ToprePad" H 1975 825 60  0001 C CNN
 F 2 "base:ToprePad" H 2000 1150 60  0001 C CNN
 F 3 "" H 2000 1150 60  0001 C CNN
 	1    2000 1150
-	0    -1   1    0
+	0    -1   1    0   
 $EndComp
 Text GLabel 1800 900  1    50   Input ~ 0
 col2
@@ -553,7 +553,7 @@ F 1 "GND" H 2205 2077 50  0000 C CNN
 F 2 "" H 2200 2250 50  0001 C CNN
 F 3 "" H 2200 2250 50  0001 C CNN
 	1    2200 2250
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	1800 900  1800 1250
@@ -569,7 +569,7 @@ F 1 "ToprePad" H 1975 1125 60  0001 C CNN
 F 2 "base:ToprePad" H 2000 1450 60  0001 C CNN
 F 3 "" H 2000 1450 60  0001 C CNN
 	1    2000 1450
-	0    -1   1    0
+	0    -1   1    0   
 $EndComp
 Wire Wire Line
 	1900 1550 1800 1550
@@ -582,7 +582,7 @@ F 1 "ToprePad" H 1975 1425 60  0001 C CNN
 F 2 "base:ToprePad" H 2000 1750 60  0001 C CNN
 F 3 "" H 2000 1750 60  0001 C CNN
 	1    2000 1750
-	0    -1   1    0
+	0    -1   1    0   
 $EndComp
 Wire Wire Line
 	1900 1850 1800 1850
@@ -595,7 +595,7 @@ F 1 "ToprePad" H 1975 1725 60  0001 C CNN
 F 2 "base:ToprePad" H 2000 2050 60  0001 C CNN
 F 3 "" H 2000 2050 60  0001 C CNN
 	1    2000 2050
-	0    -1   1    0
+	0    -1   1    0   
 $EndComp
 Wire Wire Line
 	1900 2150 1800 2150
@@ -649,7 +649,7 @@ F 1 "ToprePad" H 2525 825 60  0001 C CNN
 F 2 "base:ToprePad" H 2550 1150 60  0001 C CNN
 F 3 "" H 2550 1150 60  0001 C CNN
 	1    2550 1150
-	0    -1   1    0
+	0    -1   1    0   
 $EndComp
 Text GLabel 2350 900  1    50   Input ~ 0
 col3
@@ -662,7 +662,7 @@ F 1 "GND" H 2755 2077 50  0000 C CNN
 F 2 "" H 2750 2250 50  0001 C CNN
 F 3 "" H 2750 2250 50  0001 C CNN
 	1    2750 2250
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	2350 900  2350 1250
@@ -678,7 +678,7 @@ F 1 "ToprePad" H 2525 1125 60  0001 C CNN
 F 2 "base:ToprePad" H 2550 1450 60  0001 C CNN
 F 3 "" H 2550 1450 60  0001 C CNN
 	1    2550 1450
-	0    -1   1    0
+	0    -1   1    0   
 $EndComp
 Wire Wire Line
 	2450 1550 2350 1550
@@ -691,7 +691,7 @@ F 1 "ToprePad" H 2525 1425 60  0001 C CNN
 F 2 "base:ToprePad" H 2550 1750 60  0001 C CNN
 F 3 "" H 2550 1750 60  0001 C CNN
 	1    2550 1750
-	0    -1   1    0
+	0    -1   1    0   
 $EndComp
 Wire Wire Line
 	2450 1850 2350 1850
@@ -704,7 +704,7 @@ F 1 "ToprePad" H 2525 1725 60  0001 C CNN
 F 2 "base:ToprePad" H 2550 2050 60  0001 C CNN
 F 3 "" H 2550 2050 60  0001 C CNN
 	1    2550 2050
-	0    -1   1    0
+	0    -1   1    0   
 $EndComp
 Wire Wire Line
 	2450 2150 2350 2150
@@ -758,7 +758,7 @@ F 1 "ToprePad" H 3075 825 60  0001 C CNN
 F 2 "base:ToprePad" H 3100 1150 60  0001 C CNN
 F 3 "" H 3100 1150 60  0001 C CNN
 	1    3100 1150
-	0    -1   1    0
+	0    -1   1    0   
 $EndComp
 Text GLabel 2900 900  1    50   Input ~ 0
 col4
@@ -771,7 +771,7 @@ F 1 "GND" H 3305 2077 50  0000 C CNN
 F 2 "" H 3300 2250 50  0001 C CNN
 F 3 "" H 3300 2250 50  0001 C CNN
 	1    3300 2250
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	2900 900  2900 1250
@@ -787,7 +787,7 @@ F 1 "ToprePad" H 3075 1125 60  0001 C CNN
 F 2 "base:ToprePad" H 3100 1450 60  0001 C CNN
 F 3 "" H 3100 1450 60  0001 C CNN
 	1    3100 1450
-	0    -1   1    0
+	0    -1   1    0   
 $EndComp
 Wire Wire Line
 	3000 1550 2900 1550
@@ -800,7 +800,7 @@ F 1 "ToprePad" H 3075 1425 60  0001 C CNN
 F 2 "base:ToprePad" H 3100 1750 60  0001 C CNN
 F 3 "" H 3100 1750 60  0001 C CNN
 	1    3100 1750
-	0    -1   1    0
+	0    -1   1    0   
 $EndComp
 Wire Wire Line
 	3000 1850 2900 1850
@@ -813,7 +813,7 @@ F 1 "ToprePad" H 3075 1725 60  0001 C CNN
 F 2 "base:ToprePad" H 3100 2050 60  0001 C CNN
 F 3 "" H 3100 2050 60  0001 C CNN
 	1    3100 2050
-	0    -1   1    0
+	0    -1   1    0   
 $EndComp
 Wire Wire Line
 	3000 2150 2900 2150
@@ -867,7 +867,7 @@ F 1 "ToprePad" H 3625 825 60  0001 C CNN
 F 2 "base:ToprePad" H 3650 1150 60  0001 C CNN
 F 3 "" H 3650 1150 60  0001 C CNN
 	1    3650 1150
-	0    -1   1    0
+	0    -1   1    0   
 $EndComp
 Text GLabel 3450 900  1    50   Input ~ 0
 col5
@@ -880,7 +880,7 @@ F 1 "GND" H 3855 2077 50  0000 C CNN
 F 2 "" H 3850 2250 50  0001 C CNN
 F 3 "" H 3850 2250 50  0001 C CNN
 	1    3850 2250
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	3450 900  3450 1250
@@ -896,7 +896,7 @@ F 1 "ToprePad" H 3625 1125 60  0001 C CNN
 F 2 "base:ToprePad" H 3650 1450 60  0001 C CNN
 F 3 "" H 3650 1450 60  0001 C CNN
 	1    3650 1450
-	0    -1   1    0
+	0    -1   1    0   
 $EndComp
 Wire Wire Line
 	3550 1550 3450 1550
@@ -909,7 +909,7 @@ F 1 "ToprePad" H 3625 1425 60  0001 C CNN
 F 2 "base:ToprePad" H 3650 1750 60  0001 C CNN
 F 3 "" H 3650 1750 60  0001 C CNN
 	1    3650 1750
-	0    -1   1    0
+	0    -1   1    0   
 $EndComp
 Wire Wire Line
 	3550 1850 3450 1850
@@ -922,7 +922,7 @@ F 1 "ToprePad" H 3625 1725 60  0001 C CNN
 F 2 "base:ToprePad" H 3650 2050 60  0001 C CNN
 F 3 "" H 3650 2050 60  0001 C CNN
 	1    3650 2050
-	0    -1   1    0
+	0    -1   1    0   
 $EndComp
 Wire Wire Line
 	3550 2150 3450 2150
@@ -976,7 +976,7 @@ F 1 "ToprePad" H 4175 825 60  0001 C CNN
 F 2 "base:ToprePad" H 4200 1150 60  0001 C CNN
 F 3 "" H 4200 1150 60  0001 C CNN
 	1    4200 1150
-	0    -1   1    0
+	0    -1   1    0   
 $EndComp
 Text GLabel 4000 900  1    50   Input ~ 0
 col6
@@ -989,7 +989,7 @@ F 1 "GND" H 4405 2077 50  0000 C CNN
 F 2 "" H 4400 2250 50  0001 C CNN
 F 3 "" H 4400 2250 50  0001 C CNN
 	1    4400 2250
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	4000 900  4000 1250
@@ -1005,7 +1005,7 @@ F 1 "ToprePad" H 4175 1125 60  0001 C CNN
 F 2 "base:ToprePad" H 4200 1450 60  0001 C CNN
 F 3 "" H 4200 1450 60  0001 C CNN
 	1    4200 1450
-	0    -1   1    0
+	0    -1   1    0   
 $EndComp
 Wire Wire Line
 	4100 1550 4000 1550
@@ -1018,7 +1018,7 @@ F 1 "ToprePad" H 4175 1425 60  0001 C CNN
 F 2 "base:ToprePad" H 4200 1750 60  0001 C CNN
 F 3 "" H 4200 1750 60  0001 C CNN
 	1    4200 1750
-	0    -1   1    0
+	0    -1   1    0   
 $EndComp
 Wire Wire Line
 	4100 1850 4000 1850
@@ -1031,7 +1031,7 @@ F 1 "ToprePad" H 4175 1725 60  0001 C CNN
 F 2 "base:ToprePad" H 4200 2050 60  0001 C CNN
 F 3 "" H 4200 2050 60  0001 C CNN
 	1    4200 2050
-	0    -1   1    0
+	0    -1   1    0   
 $EndComp
 Wire Wire Line
 	4100 2150 4000 2150
@@ -1139,7 +1139,7 @@ F 1 "Wurth-632723300011" H 3712 5641 60  0000 C CNN
 F 2 "base:Wurth-632723300011-HandSoldering" H 4100 4350 60  0001 C CNN
 F 3 "" H 4100 4350 60  0001 C CNN
 	1    4100 4350
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	4200 3700 4300 3700
@@ -1152,7 +1152,7 @@ F 1 "22" V 4384 3700 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 4430 3700 50  0001 C CNN
 F 3 "~" H 4500 3700 50  0001 C CNN
 	1    4500 3700
-	0    1    1    0
+	0    1    1    0   
 $EndComp
 Wire Wire Line
 	4200 4900 4300 4900
@@ -1170,7 +1170,7 @@ F 1 "22" V 4716 3800 50  0000 C CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 4530 3800 50  0001 C CNN
 F 3 "~" H 4600 3800 50  0001 C CNN
 	1    4600 3800
-	0    1    1    0
+	0    1    1    0   
 $EndComp
 Wire Wire Line
 	4200 5000 4400 5000
@@ -1206,7 +1206,7 @@ F 1 "GND" H 5055 5327 50  0000 C CNN
 F 2 "" H 5050 5500 50  0001 C CNN
 F 3 "" H 5050 5500 50  0001 C CNN
 	1    5050 5500
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 Connection ~ 5050 5500
 $Comp
@@ -1218,7 +1218,7 @@ F 1 "VBUS" H 5315 3323 50  0000 C CNN
 F 2 "" H 5300 3150 50  0001 C CNN
 F 3 "" H 5300 3150 50  0001 C CNN
 	1    5300 3150
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	4200 3500 5300 3500
@@ -1274,7 +1274,7 @@ F 1 "5.1k" H 5480 5395 50  0000 R CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 5480 5350 50  0001 C CNN
 F 3 "~" H 5550 5350 50  0001 C CNN
 	1    5550 5350
-	-1   0    0    1
+	-1   0    0    1   
 $EndComp
 $Comp
 L Device:R R11
@@ -1285,7 +1285,7 @@ F 1 "5.1k" H 5380 5395 50  0000 R CNN
 F 2 "Resistor_SMD:R_0402_1005Metric" V 5380 5350 50  0001 C CNN
 F 3 "~" H 5450 5350 50  0001 C CNN
 	1    5450 5350
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 $Comp
 L Device:Polyfuse F1
@@ -1296,7 +1296,7 @@ F 1 "500m" V 5916 1050 50  0000 C CNN
 F 2 "Fuse:Fuse_1210_3225Metric" H 6100 850 50  0001 L CNN
 F 3 "~" H 6050 1050 50  0001 C CNN
 	1    6050 1050
-	0    1    1    0
+	0    1    1    0   
 $EndComp
 $Comp
 L Device:D_Schottky D1
@@ -1307,7 +1307,7 @@ F 1 "1A" H 6550 925 50  0000 C CNN
 F 2 "Diode_SMD:D_PowerDI-123" H 6550 1050 50  0001 C CNN
 F 3 "~" H 6550 1050 50  0001 C CNN
 	1    6550 1050
-	-1   0    0    1
+	-1   0    0    1   
 $EndComp
 $Comp
 L Device:C C4
@@ -1318,7 +1318,7 @@ F 1 "10u" H 7065 1155 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0603_1608Metric" H 6988 1050 50  0001 C CNN
 F 3 "~" H 6950 1200 50  0001 C CNN
 	1    6950 1200
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	6200 1050 6400 1050
@@ -1333,7 +1333,7 @@ F 1 "GND" H 6955 1277 50  0000 C CNN
 F 2 "" H 6950 1450 50  0001 C CNN
 F 3 "" H 6950 1450 50  0001 C CNN
 	1    6950 1450
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 $Comp
 L power:VCC #PWR0117
@@ -1344,7 +1344,7 @@ F 1 "VCC" H 6967 1223 50  0000 C CNN
 F 2 "" H 6950 1050 50  0001 C CNN
 F 3 "" H 6950 1050 50  0001 C CNN
 	1    6950 1050
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 $Comp
 L power:VBUS #PWR0118
@@ -1355,7 +1355,7 @@ F 1 "VBUS" H 5765 1173 50  0000 C CNN
 F 2 "" H 5750 1000 50  0001 C CNN
 F 3 "" H 5750 1000 50  0001 C CNN
 	1    5750 1000
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	5900 1050 5750 1050
@@ -1369,7 +1369,7 @@ F 1 "ATMEGA32U4" H 8200 4579 50  0000 C CNN
 F 2 "base:ATmega32U4" H 8150 4500 50  0001 L BNN
 F 3 "" H 7900 4700 50  0001 L BNN
 	1    8200 3200
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	5050 5500 5450 5500
@@ -1393,7 +1393,7 @@ F 1 "VCC" H 1617 3223 50  0000 C CNN
 F 2 "" H 1600 3050 50  0001 C CNN
 F 3 "" H 1600 3050 50  0001 C CNN
 	1    1600 3050
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 $Comp
 L power:VCC #PWR0120
@@ -1404,7 +1404,7 @@ F 1 "VCC" H 2417 4923 50  0000 C CNN
 F 2 "" H 2400 4750 50  0001 C CNN
 F 3 "" H 2400 4750 50  0001 C CNN
 	1    2400 4750
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 $Comp
 L power:VCC #PWR0121
@@ -1415,7 +1415,7 @@ F 1 "VCC" H 7467 2173 50  0000 C CNN
 F 2 "" H 7450 2000 50  0001 C CNN
 F 3 "" H 7450 2000 50  0001 C CNN
 	1    7450 2000
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	7450 2000 7450 2100
@@ -1474,7 +1474,7 @@ F 1 "GND" H 7455 4577 50  0000 C CNN
 F 2 "" H 7450 4750 50  0001 C CNN
 F 3 "" H 7450 4750 50  0001 C CNN
 	1    7450 4750
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	7500 3000 6750 3000
@@ -1489,7 +1489,7 @@ F 1 "VCC" H 6767 2773 50  0000 C CNN
 F 2 "" H 6750 2600 50  0001 C CNN
 F 3 "" H 6750 2600 50  0001 C CNN
 	1    6750 2600
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 $Comp
 L Device:R R13
@@ -1500,7 +1500,7 @@ F 1 "10k" H 6820 2705 50  0000 L CNN
 F 2 "Resistor_SMD:R_0603_1608Metric" V 6680 2750 50  0001 C CNN
 F 3 "~" H 6750 2750 50  0001 C CNN
 	1    6750 2750
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	7500 2900 6900 2900
@@ -1513,7 +1513,7 @@ F 1 "0.1u" H 7015 3405 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 6938 3300 50  0001 C CNN
 F 3 "~" H 6900 3450 50  0001 C CNN
 	1    6900 3450
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR0124
@@ -1524,7 +1524,7 @@ F 1 "GND" H 6905 3527 50  0000 C CNN
 F 2 "" H 6900 3700 50  0001 C CNN
 F 3 "" H 6900 3700 50  0001 C CNN
 	1    6900 3700
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	6900 3600 6900 3700
@@ -1543,7 +1543,7 @@ F 1 "1u" H 6765 3405 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 6688 3300 50  0001 C CNN
 F 3 "~" H 6650 3450 50  0001 C CNN
 	1    6650 3450
-	-1   0    0    1
+	-1   0    0    1   
 $EndComp
 $Comp
 L power:GND #PWR0125
@@ -1554,7 +1554,7 @@ F 1 "GND" H 6655 3527 50  0000 C CNN
 F 2 "" H 6650 3700 50  0001 C CNN
 F 3 "" H 6650 3700 50  0001 C CNN
 	1    6650 3700
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	6650 3600 6650 3700
@@ -1571,7 +1571,7 @@ F 1 "VBUS" H 7115 2823 50  0000 C CNN
 F 2 "" H 7100 2650 50  0001 C CNN
 F 3 "" H 7100 2650 50  0001 C CNN
 	1    7100 2650
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	7500 3100 7200 3100
@@ -1590,7 +1590,7 @@ F 1 "Crystal" H 7500 4923 50  0000 C CNN
 F 2 "base:Crystal_SMD_HC49-SD_HandSoldering" H 7500 5100 50  0001 C CNN
 F 3 "~" H 7500 5100 50  0001 C CNN
 	1    7500 5100
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C C5
@@ -1601,7 +1601,7 @@ F 1 "22p" H 7315 5455 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 7238 5350 50  0001 C CNN
 F 3 "~" H 7200 5500 50  0001 C CNN
 	1    7200 5500
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 $Comp
 L Device:C C6
@@ -1612,7 +1612,7 @@ F 1 "22p" H 7915 5455 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0402_1005Metric" H 7838 5350 50  0001 C CNN
 F 3 "~" H 7800 5500 50  0001 C CNN
 	1    7800 5500
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	7800 5350 7800 5100
@@ -1638,7 +1638,7 @@ F 1 "GND" H 7555 5727 50  0000 C CNN
 F 2 "" H 7550 5900 50  0001 C CNN
 F 3 "" H 7550 5900 50  0001 C CNN
 	1    7550 5900
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	5750 1050 5750 1000
@@ -1660,7 +1660,7 @@ F 1 "GND" H 6305 3827 50  0000 C CNN
 F 2 "" H 6300 4000 50  0001 C CNN
 F 3 "" H 6300 4000 50  0001 C CNN
 	1    6300 4000
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	6300 3900 6300 4000
@@ -1675,7 +1675,7 @@ F 3 "4.3mm" H 6300 3600 50  0001 L BNN
 F 4 "Omron" H 6300 3600 50  0001 L BNN "Field5"
 F 5 "Manufacturer Recommendations" H 6300 3600 50  0001 L BNN "Field6"
 	1    6300 3600
-	0    1    -1   0
+	0    1    -1   0   
 $EndComp
 Connection ~ 7200 5100
 Wire Wire Line
@@ -1692,7 +1692,7 @@ F 1 "PJ-327A" H 9583 1776 39  0000 C CNN
 F 2 "base:PJ-327A" H 9600 1350 39  0001 C CNN
 F 3 "" H 9600 1350 39  0001 C CNN
 	1    9600 1350
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H1
@@ -1703,7 +1703,7 @@ F 1 "MountingHole" H 1250 6405 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2" H 1150 6450 50  0001 C CNN
 F 3 "~" H 1150 6450 50  0001 C CNN
 	1    1150 6450
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H2
@@ -1714,7 +1714,7 @@ F 1 "MountingHole" H 1250 6755 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2" H 1150 6800 50  0001 C CNN
 F 3 "~" H 1150 6800 50  0001 C CNN
 	1    1150 6800
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H3
@@ -1725,7 +1725,7 @@ F 1 "MountingHole" H 1250 7105 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2" H 1150 7150 50  0001 C CNN
 F 3 "~" H 1150 7150 50  0001 C CNN
 	1    1150 7150
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H4
@@ -1736,7 +1736,7 @@ F 1 "MountingHole" H 2200 6405 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2" H 2100 6450 50  0001 C CNN
 F 3 "~" H 2100 6450 50  0001 C CNN
 	1    2100 6450
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H5
@@ -1747,7 +1747,7 @@ F 1 "MountingHole" H 2200 6755 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2" H 2100 6800 50  0001 C CNN
 F 3 "~" H 2100 6800 50  0001 C CNN
 	1    2100 6800
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H6
@@ -1758,7 +1758,7 @@ F 1 "MountingHole" H 2250 7105 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2" H 2150 7150 50  0001 C CNN
 F 3 "~" H 2150 7150 50  0001 C CNN
 	1    2150 7150
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H7
@@ -1769,7 +1769,7 @@ F 1 "MountingHole" H 3300 6455 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2" H 3200 6500 50  0001 C CNN
 F 3 "~" H 3200 6500 50  0001 C CNN
 	1    3200 6500
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H8
@@ -1780,7 +1780,7 @@ F 1 "MountingHole" H 3300 6805 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2" H 3200 6850 50  0001 C CNN
 F 3 "~" H 3200 6850 50  0001 C CNN
 	1    3200 6850
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H9
@@ -1791,7 +1791,7 @@ F 1 "MountingHole" H 3300 7155 50  0000 L CNN
 F 2 "MountingHole:MountingHole_2.2mm_M2" H 3200 7200 50  0001 C CNN
 F 3 "~" H 3200 7200 50  0001 C CNN
 	1    3200 7200
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 Wire Wire Line
 	4200 4000 5300 4000
@@ -1829,26 +1829,26 @@ sda
 Wire Wire Line
 	10000 1450 10000 1350
 $Comp
-L power:GND #PWR?
+L power:GND #PWR03
 U 1 1 5EB12A9E
 P 10000 1550
-F 0 "#PWR?" H 10000 1300 50  0001 C CNN
+F 0 "#PWR03" H 10000 1300 50  0001 C CNN
 F 1 "GND" H 10005 1377 50  0000 C CNN
 F 2 "" H 10000 1550 50  0001 C CNN
 F 3 "" H 10000 1550 50  0001 C CNN
 	1    10000 1550
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #PWR?
+L power:VCC #PWR02
 U 1 1 5EB13325
 P 10000 1050
-F 0 "#PWR?" H 10000 900 50  0001 C CNN
+F 0 "#PWR02" H 10000 900 50  0001 C CNN
 F 1 "VCC" H 10017 1223 50  0000 C CNN
 F 2 "" H 10000 1050 50  0001 C CNN
 F 3 "" H 10000 1050 50  0001 C CNN
 	1    10000 1050
-	1    0    0    -1
+	1    0    0    -1  
 $EndComp
 Text GLabel 10000 1150 2    50   BiDi ~ 0
 scl
@@ -1876,4 +1876,64 @@ NoConn ~ 7500 3700
 NoConn ~ 7500 3800
 NoConn ~ 7500 3900
 NoConn ~ 7500 4000
+Text GLabel 9850 2900 0    50   BiDi ~ 0
+scl
+$Comp
+L Device:R R14
+U 1 1 5EB8C987
+P 9900 2600
+F 0 "R14" H 9830 2554 50  0000 R CNN
+F 1 "5.1k" H 9830 2645 50  0000 R CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 9830 2600 50  0001 C CNN
+F 3 "~" H 9900 2600 50  0001 C CNN
+	1    9900 2600
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:VCC #PWR01
+U 1 1 5EBA01B2
+P 9900 2250
+F 0 "#PWR01" H 9900 2100 50  0001 C CNN
+F 1 "VCC" H 9917 2423 50  0000 C CNN
+F 2 "" H 9900 2250 50  0001 C CNN
+F 3 "" H 9900 2250 50  0001 C CNN
+	1    9900 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9900 2450 9900 2250
+Wire Wire Line
+	9900 2750 9900 2900
+Wire Wire Line
+	9900 2900 9850 2900
+$Comp
+L Device:R R15
+U 1 1 5EBD9E49
+P 10450 2600
+F 0 "R15" H 10380 2554 50  0000 R CNN
+F 1 "5.1k" H 10380 2645 50  0000 R CNN
+F 2 "Resistor_SMD:R_0402_1005Metric" V 10380 2600 50  0001 C CNN
+F 3 "~" H 10450 2600 50  0001 C CNN
+	1    10450 2600
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:VCC #PWR04
+U 1 1 5EBD9E4F
+P 10450 2250
+F 0 "#PWR04" H 10450 2100 50  0001 C CNN
+F 1 "VCC" H 10467 2423 50  0000 C CNN
+F 2 "" H 10450 2250 50  0001 C CNN
+F 3 "" H 10450 2250 50  0001 C CNN
+	1    10450 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10450 2450 10450 2250
+Wire Wire Line
+	10450 2750 10450 2900
+Wire Wire Line
+	10450 2900 10400 2900
+Text GLabel 10400 2900 0    50   BiDi ~ 0
+sda
 $EndSCHEMATC
