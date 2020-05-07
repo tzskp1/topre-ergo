@@ -75,24 +75,12 @@ int main(void)
 /** Configures the board hardware and chip peripherals for the demo's functionality. */
 void SetupHardware(void)
 {
-#if (ARCH == ARCH_AVR8)
 	/* Disable watchdog if enabled by bootloader/fuses */
 	MCUSR &= ~(1 << WDRF);
 	wdt_disable();
 
 	/* Disable clock division */
 	clock_prescale_set(clock_div_1);
-#elif (ARCH == ARCH_XMEGA)
-	/* Start the PLL to multiply the 2MHz RC oscillator to 32MHz and switch the CPU core to run from it */
-	XMEGACLK_StartPLL(CLOCK_SRC_INT_RC2MHZ, 2000000, F_CPU);
-	XMEGACLK_SetCPUClockSource(CLOCK_SRC_PLL);
-
-	/* Start the 32MHz internal RC oscillator and start the DFLL to increase it to 48MHz using the USB SOF as a reference */
-	XMEGACLK_StartInternalOscillator(CLOCK_SRC_INT_RC32MHZ);
-	XMEGACLK_StartDFLL(CLOCK_SRC_INT_RC32MHZ, DFLL_REF_INT_USBSOF, F_USB);
-
-	PMIC.CTRL = PMIC_LOLVLEN_bm | PMIC_MEDLVLEN_bm | PMIC_HILVLEN_bm;
-#endif
 
 	/* Hardware Initialization */
 	USB_Init();
@@ -263,14 +251,6 @@ void CreateKeyboardReport(MyUSB_KeyboardReport_Data_t* const ReportData)
 	  ReportData->KeyCode[UsedKeyCodes++] = 0xFF;
 }
 
-/** Processes a received LED report, and updates the board LEDs states to match.
- *
- *  \param[in] LEDReport  LED status report from the host
- */
-void ProcessLEDReport(const uint8_t LEDReport)
-{
-}
-
 /** Sends the next HID report to the host, via the keyboard data endpoint. */
 void SendNextReport(void)
 {
@@ -313,30 +293,6 @@ void SendNextReport(void)
 	}
 }
 
-/** Reads the next LED status report from the host from the LED data endpoint, if one has been sent. */
-void ReceiveNextReport(void)
-{
-	/* Select the Keyboard LED Report Endpoint */
-	Endpoint_SelectEndpoint(KEYBOARD_OUT_EPADDR);
-
-	/* Check if Keyboard LED Endpoint contains a packet */
-	if (Endpoint_IsOUTReceived())
-	{
-		/* Check to see if the packet contains data */
-		if (Endpoint_IsReadWriteAllowed())
-		{
-			/* Read in the LED report from the host */
-			uint8_t LEDReport = Endpoint_Read_8();
-
-			/* Process the read LED report from the host */
-			ProcessLEDReport(LEDReport);
-		}
-
-		/* Handshake the OUT Endpoint - clear endpoint and ready for next report */
-		Endpoint_ClearOUT();
-	}
-}
-
 /** Function to manage HID report generation and transmission to the host, when in report mode. */
 void HID_Task(void)
 {
@@ -346,7 +302,4 @@ void HID_Task(void)
 
 	/* Send the next keypress report to the host */
 	SendNextReport();
-
-	/* Process the LED report sent from the host */
-	//ReceiveNextReport();
 }
