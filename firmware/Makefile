@@ -5,11 +5,11 @@ LDFLAGS=-Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -MMD -MP -MF
 
 all: main.hex
 
-%.elf: %.c
-	$(CC) $(CFLAGS) $< -o $@
+%.o: %.c
+	$(CC) $(CFLAGS) -c $^ -o $@
 
-# test.elf: test.o
-# 	$(CC) $(LDFLAGS) $< -o $@
+main.elf: main.c twi.o
+	$(CC) $(CFLAGS) $^ -o $@
 
 %.hex: %.elf
 	avr-objcopy -I elf32-avr -O ihex $< $@
