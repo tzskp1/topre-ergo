@@ -75,11 +75,9 @@ void twi_init(void)
   // digitalWrite(SDA, 1);
   // digitalWrite(SCL, 1);
 
-  DDRD &= ~(1 << 0); //Port D0 SCL
-  //DDRD |= (1 << 0); //Port D0 SCL
+  DDRD &= ~(1 << 0);
   PORTD |= (1 << 0); //Port D0 SCL
-  DDRD |= (1 << 1); //Port D0 SCL
-  // DDRD &= ~(1 << 1); //Port D0 SCL
+  DDRD &= ~(1 << 1);
   PORTD |= (1 << 1); //Port D1 SDA
 
   // initialize twi prescaler and bit rate
