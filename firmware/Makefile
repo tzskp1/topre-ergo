@@ -5,8 +5,8 @@ LDFLAGS=-Os -g -flto -fuse-linker-plugin -Wl,--gc-sections -MMD -MP -MF
 
 all: main.hex
 
-%.o: %.c
-	$(CC) $(CFLAGS) -c $^ -o $@
+%.o: %.c %.h
+	$(CC) $(CFLAGS) -c $< -o $@
 
 main.elf: main.c twi.o
 	$(CC) $(CFLAGS) $^ -o $@
