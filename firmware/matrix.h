@@ -9,9 +9,15 @@
   #define SELA  2 /* D */
   #define SELB  6 /* E */
 
-  const uint16_t relax_time = 80;
+  #define ACTUATION  200
+  #define RELEASE    100
 
-  extern uint16_t state[4][7];
+  struct state {
+    uint8_t depth;
+    uint8_t pressed;
+  };
+
+  extern struct state states[4][7];
 
   void init_matrix ();
 
