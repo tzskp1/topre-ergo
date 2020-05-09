@@ -80,10 +80,10 @@
 
 		typedef struct
 		{
-			uint8_t Modifier; /**< Keyboard modifier byte, indicating pressed modifier keys (a combination of
-			                   *   \c HID_KEYBOARD_MODIFER_* masks).
-			                   */
-			uint8_t KeyCode[104 / 8]; /**< Key codes of the all keys. */
+           // uint8_t Modifier; /**< Keyboard modifier byte, indicating pressed modifier keys (a combination of
+		   //                     *   \c HID_KEYBOARD_MODIFER_* masks).
+		   //                     */
+          uint8_t KeyCode[(104 / 8) + 1]; /**< Key codes of the all keys. */
 		} ATTR_PACKED MyUSB_KeyboardReport_Data_t;
 
 	/* Macros: */

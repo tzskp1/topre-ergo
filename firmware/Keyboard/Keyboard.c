@@ -36,6 +36,8 @@
  */
 
 #include "Keyboard.h"
+#include "keycode.h"
+#include "matrix.h"
 
 /** Indicates what report mode the host has requested, true for normal HID reporting mode, \c false for special boot
  *  protocol reporting mode.
@@ -53,24 +55,6 @@ static uint16_t IdleCount = 500;
  */
 static uint16_t IdleMSRemaining = 0;
 
-int toggle = 0;
-
-/** Main program entry point. This routine configures the hardware required by the application, then
- *  enters a loop to run the application tasks in sequence.
- */
-int main(void)
-{
-	SetupHardware();
-
-	GlobalInterruptEnable();
-
-	for (;;)
-	{
-        toggle = 1 - toggle;
-		HID_Task();
-		USB_USBTask();
-	}
-}
 
 /** Configures the board hardware and chip peripherals for the demo's functionality. */
 void SetupHardware(void)
@@ -233,22 +217,19 @@ void EVENT_USB_Device_StartOfFrame(void)
  */
 void CreateKeyboardReport(MyUSB_KeyboardReport_Data_t* const ReportData)
 {
-	uint8_t UsedKeyCodes      = 0;
-
 	/* Clear the report contents */
 	memset(ReportData, 0, sizeof(MyUSB_KeyboardReport_Data_t));
-
-	/* Make sent key uppercase by indicating that the left shift key is pressed */
-	ReportData->Modifier = HID_KEYBOARD_MODIFIER_LEFTSHIFT;
-
-    if (toggle) {
-      UsedKeyCodes = 0;
-    } else {
-      UsedKeyCodes = 3;
+    scan_matrix ();
+    for(int i = 0; i < 4; i++) {
+      for(int j = 0; j < 7; j++) {
+        if (states[i][j].pressed) {
+          ReportData->KeyCode[arraycode[i][j].number] |= arraycode[i][j].mask;
+        }
+      }
     }
-	  ReportData->KeyCode[UsedKeyCodes++] = 0xFF;
-	  ReportData->KeyCode[UsedKeyCodes++] = 0xFF;
-	  ReportData->KeyCode[UsedKeyCodes++] = 0xFF;
+
+    /* Make sent key uppercase by indicating that the left shift key is pressed */
+	//ReportData->Modifier = HID_KEYBOARD_MODIFIER_LEFTSHIFT;
 }
 
 /** Sends the next HID report to the host, via the keyboard data endpoint. */
