@@ -1,4 +1,4 @@
-#include "parameter.h"
+#include "../parameter.h"
 
 uint16_t keyhi[4][7] =
   { {700, 600, 600, 600, 600, 600, 600 },

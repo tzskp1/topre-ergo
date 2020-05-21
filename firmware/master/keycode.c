@@ -1,4 +1,5 @@
-#include "keycode.h"
+#include "../keycode.h"
+
 #define NULL { .number = 1, .mask = 0x00 }
 #define A    { .number = 1, .mask = 0x10 }
 #define B    { .number = 1, .mask = 0x20 }
@@ -26,11 +27,6 @@
 #define X    { .number = 4, .mask = 0x08 }
 #define Y    { .number = 4, .mask = 0x10 }
 #define Z    { .number = 4, .mask = 0x20 }
-
-
-// 1 << (29 % 8)
-// (29 / 8) + 1
-
 
 struct code keycode[128] =
   { NULL,

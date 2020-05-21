@@ -36,8 +36,8 @@
  */
 
 #include "Keyboard.h"
-#include "keycode.h"
-#include "matrix.h"
+#include "../keycode.h"
+#include "../matrix.h"
 
 /** Indicates what report mode the host has requested, true for normal HID reporting mode, \c false for special boot
  *  protocol reporting mode.
