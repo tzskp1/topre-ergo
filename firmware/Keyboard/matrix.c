@@ -1,6 +1,11 @@
 #include "matrix.h"
 #include "parameter.h"
-#define RELAX_TIME 20
+
+#define DRAIN 6 /* C */
+#define INH   7 /* C */
+#define READ  0 /* F */
+#define SELA  2 /* E */
+#define SELB  6 /* E */
 
 struct state states[4][7] = {0};
 
@@ -8,8 +13,8 @@ uint16_t last_time = 0;
 
 void init_matrix () {
   DDRB = 0xFF;
-  DDRD |= _BV(INH);
-  DDRD |= _BV(SELA);
+  DDRC |= _BV(INH);
+  DDRE |= _BV(SELA);
   DDRE |= _BV(SELB);
   ADCSRA |= _BV(ADEN);  // wake up adc
   ADCSRA &= ~_BV(ADIE); // disallow interrupt
@@ -17,6 +22,7 @@ void init_matrix () {
   ADCSRB &= 0b11110000;
   //ADCSRA |= _BV(ADPS2) | _BV(ADPS1) | _BV(ADPS0);  // 104us
   ADCSRA |= _BV(ADPS1);
+  // ADCSRA |= _BV(ADPS0);
   ADMUX |= (1 << 6);    // right padding, vcc ref
   ADMUX |= READ;        // READ
   TCCR1B = 0b00000001;  // start counter1
@@ -27,19 +33,19 @@ void init_matrix () {
 void set_row(int row) {
   switch (row) {
   case 0:
-    PORTD &= ~_BV(SELA);
+    PORTE &= ~_BV(SELA);
     PORTE &= ~_BV(SELB);
     break;
   case 1:
-    PORTD |= _BV(SELA);
+    PORTE |= _BV(SELA);
     PORTE &= ~_BV(SELB);
     break;
   case 2:
-    PORTD &= ~_BV(SELA);
+    PORTE &= ~_BV(SELA);
     PORTE |= _BV(SELB);
     break;
   case 3:
-    PORTD |= _BV(SELA);
+    PORTE |= _BV(SELA);
     PORTE |= _BV(SELB);
     break;
   default:
@@ -82,13 +88,12 @@ uint16_t strobe_read (int row, int col) {
 }
 
 uint8_t normalize (int row, int col, uint16_t value) {
-  if (value > keyhi[row][col])
-    value = keyhi[row][col];
-  if (value < keylo[row][col])
-    value = keylo[row][col];
-  uint16_t t = 0xFF * (value - keylo[row][col]);
-  uint16_t size = keyhi[row][col] - keylo[row][col];
-  return (uint8_t) (t / size);
+  uint16_t hi = keyhi[row][col];
+  uint16_t lo = keylo[row][col];
+  if (value > hi) value = hi;
+  if (value < lo) value = lo;
+  uint16_t t = 0xFF * (value - lo);
+  return (uint8_t) (t / (hi - lo));
 }
 
 void scan_matrix () {

@@ -27,6 +27,11 @@
 #define Y    { .number = 4, .mask = 0x10 }
 #define Z    { .number = 4, .mask = 0x20 }
 
+
+// 1 << (29 % 8)
+// (29 / 8) + 1
+
+
 struct code keycode[128] =
   { NULL,
     NULL,
@@ -161,6 +166,37 @@ struct code keycode[128] =
 struct code arraycode[4][7] = {0};
 
 void init_arraycode () {
-  arraycode[2][2] = keycode['b'];
-  arraycode[1][2] = keycode['a'];
+  arraycode[0][0].number = (41 / 8) + 1;
+  arraycode[0][0].mask = 1 << (41 % 8);
+  // ESC
+  arraycode[0][1].number = (52 / 8) + 1;
+  arraycode[0][1].mask = 1 << (52 % 8);
+  //'
+  arraycode[0][2].number = (54 / 8) + 1;
+  arraycode[0][2].mask = 1 << (54 % 8);
+  //,
+  arraycode[0][3].number = (55 / 8) + 1;
+  arraycode[0][3].mask = 1 << (55 % 8);
+  //.
+  arraycode[0][4] = keycode['p'];
+  arraycode[0][5] = keycode['y'];
+  // arraycode[0][6] = ?;
+
+  // arraycode[1][0] = ?;
+  arraycode[1][1] = keycode['a'];
+  arraycode[1][2] = keycode['o'];
+  arraycode[1][3] = keycode['e'];
+  arraycode[1][4] = keycode['u'];
+  arraycode[1][5] = keycode['i'];
+  // arraycode[1][6] = ?;
+
+  // arraycode[2][0] = ?;
+  arraycode[2][1].number = (51 / 8) + 1;
+  arraycode[2][1].mask = 1 << (51 % 8);
+  //;
+  arraycode[2][2] = keycode['q'];
+  arraycode[2][3] = keycode['j'];
+  arraycode[2][4] = keycode['k'];
+  // arraycode[2][5] = keycode['x'];
+  // arraycode[2][6] = ?;
 }

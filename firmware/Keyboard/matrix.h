@@ -3,12 +3,7 @@
   #include <avr/io.h>
   #include <avr/interrupt.h>
 
-  #define DRAIN 6 /* C */
-  #define INH   7 /* D */
-  #define READ  4 /* F */
-  #define SELA  2 /* D */
-  #define SELB  6 /* E */
-
+  #define RELAX_TIME 15
   #define ACTUATION  200
   #define RELEASE    100
 
