@@ -1826,19 +1826,6 @@ Text GLabel 8900 3300 2    50   BiDi ~ 0
 scl
 Text GLabel 8900 3400 2    50   BiDi ~ 0
 sda
-Wire Wire Line
-	10000 1450 10000 1350
-$Comp
-L power:GND #PWR03
-U 1 1 5EB12A9E
-P 10000 1550
-F 0 "#PWR03" H 10000 1300 50  0001 C CNN
-F 1 "GND" H 10005 1377 50  0000 C CNN
-F 2 "" H 10000 1550 50  0001 C CNN
-F 3 "" H 10000 1550 50  0001 C CNN
-	1    10000 1550
-	1    0    0    -1  
-$EndComp
 $Comp
 L power:VCC #PWR02
 U 1 1 5EB13325
@@ -1850,9 +1837,7 @@ F 3 "" H 10000 1050 50  0001 C CNN
 	1    10000 1050
 	1    0    0    -1  
 $EndComp
-Text GLabel 10000 1150 2    50   BiDi ~ 0
-scl
-Text GLabel 10000 1350 2    50   BiDi ~ 0
+Text GLabel 10000 1450 2    50   BiDi ~ 0
 sda
 NoConn ~ 4200 3300
 NoConn ~ 4200 3400
@@ -1936,4 +1921,32 @@ Wire Wire Line
 	10450 2900 10400 2900
 Text GLabel 10400 2900 0    50   BiDi ~ 0
 sda
+$Comp
+L power:GND #PWR03
+U 1 1 5EB12A9E
+P 10350 1550
+F 0 "#PWR03" H 10350 1300 50  0001 C CNN
+F 1 "GND" H 10355 1377 50  0000 C CNN
+F 2 "" H 10350 1550 50  0001 C CNN
+F 3 "" H 10350 1550 50  0001 C CNN
+	1    10350 1550
+	1    0    0    -1  
+$EndComp
+Text GLabel 10000 1150 2    50   BiDi ~ 0
+scl
+Wire Wire Line
+	10000 1350 10350 1350
+Wire Wire Line
+	10350 1350 10350 1550
+$Comp
+L power:VCC #PWR?
+U 1 1 5EE168DD
+P 10000 1550
+F 0 "#PWR?" H 10000 1400 50  0001 C CNN
+F 1 "VCC" H 10017 1723 50  0000 C CNN
+F 2 "" H 10000 1550 50  0001 C CNN
+F 3 "" H 10000 1550 50  0001 C CNN
+	1    10000 1550
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC

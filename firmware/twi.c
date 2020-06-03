@@ -215,6 +215,74 @@ uint8_t twi_readFrom(uint8_t address, uint8_t* data, uint8_t length, uint8_t sen
   return length;
 }
 
+void twi_readFromHead(uint8_t address, uint8_t sendStop, uint8_t length)
+{
+  // ensure data will fit into buffer
+  if(TWI_BUFFER_LENGTH < length){
+    return 0;
+  }
+
+  // wait until twi is ready, become master receiver
+  while(TWI_READY != twi_state){
+    continue;
+  }
+  twi_state = TWI_MRX;
+  twi_sendStop = sendStop;
+  // reset error state (0xFF.. no error occured)
+  twi_error = 0xFF;
+
+  // initialize buffer iteration vars
+  twi_masterBufferIndex = 0;
+  twi_masterBufferLength = length-1;  // This is not intuitive, read on...
+  // On receive, the previously configured ACK/NACK setting is transmitted in
+  // response to the received byte before the interrupt is signalled.
+  // Therefor we must actually set NACK when the _next_ to last byte is
+  // received, causing that NACK to be sent in response to receiving the last
+  // expected byte of data.
+
+  // build sla+w, slave device address + w bit
+  twi_slarw = TW_READ;
+  twi_slarw |= address << 1;
+
+  if (true == twi_inRepStart) {
+    // if we're in the repeated start state, then we've already sent the start,
+    // (@@@ we hope), and the TWI statemachine is just waiting for the address byte.
+    // We need to remove ourselves from the repeated start state before we enable interrupts,
+    // since the ISR is ASYNC, and we could get confused if we hit the ISR before cleaning
+    // up. Also, don't enable the START interrupt. There may be one pending from the
+    // repeated start that we sent ourselves, and that would really confuse things.
+    twi_inRepStart = false;			// remember, we're dealing with an ASYNC ISR
+    do {
+      TWDR = twi_slarw;
+    } while(TWCR & _BV(TWWC));
+    TWCR = _BV(TWINT) | _BV(TWEA) | _BV(TWEN) | _BV(TWIE);	// enable INTs, but not START
+  }
+  else
+    // send start condition
+    TWCR = _BV(TWEN) | _BV(TWIE) | _BV(TWEA) | _BV(TWINT) | _BV(TWSTA);
+}
+
+uint8_t twi_readFromTail(uint8_t* data, uint8_t length)
+{
+  uint8_t i;
+
+  // wait for read operation to complete
+  while(TWI_MRX == twi_state){
+    continue;
+  }
+
+  if (twi_masterBufferIndex < length)
+    length = twi_masterBufferIndex;
+
+  // copy twi buffer to data
+  for(i = 0; i < length; ++i){
+    data[i] = twi_masterBuffer[i];
+  }
+
+  return length;
+}
+
+
 /*
  * Function twi_writeTo
  * Desc     attempts to become twi bus master and write a

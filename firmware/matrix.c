@@ -78,11 +78,11 @@ uint16_t strobe_read (int row, int col) {
   PORTB = _BV(col);
   ADCSRA |= _BV(ADSC);
   while (ADCSRA & _BV(ADSC));
-  cli();
+  cli ();
   val = ADC;
-  sei();
+  sei ();
   PORTB = 0;
-  vacuum_drain();
+  vacuum_drain ();
   last_time = TCNT1;
   return val;
 }

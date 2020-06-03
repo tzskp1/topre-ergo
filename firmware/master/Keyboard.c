@@ -218,16 +218,21 @@ void EVENT_USB_Device_StartOfFrame(void)
 void CreateKeyboardReport(MyUSB_KeyboardReport_Data_t* const ReportData)
 {
 	/* Clear the report contents */
-	memset(ReportData, 0, sizeof(MyUSB_KeyboardReport_Data_t));
-    scan_matrix ();
-    for(int i = 0; i < 4; i++) {
-      for(int j = 0; j < 7; j++) {
-        if (states[i][j].pressed) {
-          ReportData->KeyCode[arraycode[i][j].number] |= arraycode[i][j].mask;
-        }
+  uint8_t buf[4];
+  twi_readFromHead(8, 1, 4);
+  memset(ReportData, 0, sizeof(MyUSB_KeyboardReport_Data_t));
+  scan_matrix ();
+  for(int i = 0; i < 4; i++) {
+    for(int j = 0; j < 7; j++) {
+      if (states[i][j].pressed) {
+        ReportData->KeyCode[arraycode[i][j].number] |= arraycode[i][j].mask;
       }
     }
-
+  }
+  twi_readFromTail(buf, 4);
+  if (buf[0] & 0x01) {
+    ReportData->KeyCode[arraycode[2][2].number] |= arraycode[2][2].mask;
+  }
     /* Make sent key uppercase by indicating that the left shift key is pressed */
 	//ReportData->Modifier = HID_KEYBOARD_MODIFIER_LEFTSHIFT;
 }

@@ -8,7 +8,7 @@ all: main.hex
 %.o: %.c %.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
-main.elf: main.c parameter.o matrix.o
+main.elf: main.c twi.o
 	$(CC) $(CFLAGS) $^ -o $@
 
 %.hex: %.elf
